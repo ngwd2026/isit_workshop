@@ -296,22 +296,27 @@ header:
   /* === 1. 人物排列网格 === */
   .org-grid {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* 允许在手机上换行，但在电脑上会尽量横排 */
-    gap: 20px;       /*稍微减小间距，更容易排下一行 */
+    justify-content: center; /* 卡片整体居中，如果想左对齐改成 flex-start */
+    flex-wrap: wrap;
+    gap: 30px; /* 增加卡片之间的间距 */
+    margin-top: 30px; /* 让卡片和标题之间有点距离 */
   }
 
   /* === 2. 单个人物卡片 === */
   .org-card {
-    /* 关键修改：用百分比宽度，保证一行能塞下3个 */
+    /* 宽度设置：根据需要调整，30%左右一行能放3个 */
     width: 30%; 
-    min-width: 180px; /* 最小不小于180px，防止手机上太挤 */
+    min-width: 250px; /* 稍微加大最小宽度，防止太窄 */
     
     text-align: center;
     background-color: #ffffff; 
     border: 1px solid #e1e4e8;
     border-radius: 8px;
-    padding: 20px 5px; /* 稍微减小内部左右边距 */
+
+    /* === 重点修改：增加内部留白 === */
+    /* 上下25px，左右30px -> 这样照片离边框就远了，像右图一样 */
+    padding: 25px 30px; 
+    
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
@@ -323,28 +328,30 @@ header:
   /* === 3. 照片样式 === */
   .org-portrait {
     width: 100%;
-    /* 稍微减小照片高度，保持比例 */
+    /* === 重点保持：高度不变 === */
     height: 220px; 
-    object-fit: cover;
-    border-radius: 6px;
+    /* 确保裁剪正常，人脸不拉伸 */
+    object-fit: cover; 
+    object-position: top; /* 优先显示头部 */
+    border-radius: 4px; /* 照片圆角稍微小一点，更显正式 */
     margin-bottom: 15px;
   }
 
   /* === 4. 文字信息 === */
   .org-name {
-    font-size: 1.1rem; /* 稍微调小字号防止换行 */
+    font-size: 1.2rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 8px;
   }
   .org-info {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #666;
-    line-height: 1.3;
+    line-height: 1.4;
   }
   .org-email {
-    font-size: 0.8em;
-    margin-top: 10px;
+    font-size: 0.85em;
+    margin-top: 12px;
     word-break: break-all;
   }
   .org-email a {
@@ -355,14 +362,31 @@ header:
   .org-email a:hover {
     text-decoration: underline;
   }
+  
+  /* 标题修正样式 */
+  .section-title {
+    /* 确保标题左对齐，没有额外的左边距 */
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
 </style>
 
-<div class="section-box" style="padding: 40px 20px !important;">
+<!-- 
+  修改说明：
+  去掉了最外层 div 的 style="padding: 40px 20px !important;"
+  这个 padding 是导致你的标题 "太靠右" 的原因。
+  现在外层容器只保留 class，不再强制加内边距。
+-->
+<div class="section-box">
 
-  <h2 id="organizers">Workshop Organizers</h2>
+  <!-- 给 H2 加一个类，或者确保它不受居中影响 -->
+  <h2 id="organizers" class="section-title">Workshop Organizers</h2>
 
   <div class="org-grid">
 
+    <!-- 第一位 -->
     <div class="org-card">
       <img src="{{ '/assets/images/Liu.jpg' | relative_url }}" class="org-portrait" alt="Lei Liu">
       <div class="org-name">Lei Liu</div>
@@ -372,6 +396,7 @@ header:
       </div>
     </div>
 
+    <!-- 第二位 -->
     <div class="org-card">
       <img src="{{ '/assets/images/Chi.jpg' | relative_url }}" class="org-portrait" alt="Yuhao Chi">
       <div class="org-name">Yuhao Chi</div>
@@ -381,6 +406,7 @@ header:
       </div>
     </div>
 
+    <!-- 第三位 -->
     <div class="org-card">
       <img src="{{ '/assets/images/Ge.jpg' | relative_url }}" class="org-portrait" alt="Yao Ge">
       <div class="org-name">Yao Ge</div>
