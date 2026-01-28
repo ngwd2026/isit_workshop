@@ -291,7 +291,6 @@ header:
   </table>
 </div>
 
-<h2 id="organizers" style="border-bottom: 1px solid #eee; padding-bottom: 10px;">Workshop Organizers</h2>
 
 <style>
   /* === 1. 最外层的大框框 === */
@@ -315,37 +314,45 @@ header:
     font-size: 1.5rem;
   }
 
-  /* === 3. 布局网格 === */
+<style>
+  /* === 人物排列网格 === */
   .org-grid {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: center; /* 居中排列 */
+    gap: 30px; /* 卡片间距 */
     flex-wrap: wrap;
+    margin-top: 20px;
   }
 
-  /* === 4. 人物卡片 === */
+  /* === 单个人物卡片 === */
   .org-card {
     width: 220px;
     text-align: center;
-    /* 如果不需要卡片边框，可以把下面这行 border 删掉 */
-    border: 1px solid #f0f0f0; 
+    /* 让卡片背景是纯白，这样能在淡蓝色的 section-box 里凸显出来 */
+    background-color: #ffffff; 
+    border: 1px solid #e1e4e8;
     border-radius: 8px;
-    padding: 20px 10px;
-    transition: transform 0.3s ease;
+    padding: 25px 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+  
+  /* 鼠标悬停效果 */
   .org-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
 
-  /* === 5. 照片与文字 === */
+  /* === 照片样式 === */
   .org-portrait {
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 15px;
+    /* 移除照片自带的边框，因为现在有卡片边框了 */
   }
+
+  /* === 名字和信息样式 === */
   .org-name {
     font-size: 1.2rem;
     font-weight: bold;
@@ -357,9 +364,12 @@ header:
     color: #666;
     line-height: 1.4;
   }
+  
+  /* === 邮箱样式 === */
   .org-email {
     font-size: 0.85em;
     margin-top: 10px;
+    word-break: break-all; /* 防止邮箱太长撑破卡片 */
   }
   .org-email a {
     text-decoration: none;
@@ -371,7 +381,7 @@ header:
   }
 </style>
 
-<div class="big-container">
+<div class="section-box">
 
   <h2 id="organizers">Workshop Organizers</h2>
 
