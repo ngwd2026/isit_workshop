@@ -294,49 +294,72 @@ header:
 <h2 id="organizers" style="border-bottom: 1px solid #eee; padding-bottom: 10px;">Workshop Organizers</h2>
 
 <style>
+  /* === 1. 外层容器样式 === */
   .org-grid {
     display: flex;
     justify-content: center;
-    gap: 50px; /* 间距 */
+    gap: 30px; /* 卡片之间的间距 */
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 40px;
   }
+
+  /* === 2. 卡片盒子样式 (关键修改) === */
   .org-card {
-    width: 200px; /* 调整卡片宽度 */
+    width: 230px; /* 稍微增加宽度以适应内边距 */
     text-align: center;
+    
+    /* 新增：浅色框框效果 */
+    background-color: #fff; /* 白色背景 */
+    border: 1px solid #e1e4e8; /* 浅灰色细边框 */
+    border-radius: 12px; /* 圆角 */
+    padding: 25px 15px; /* 卡片内部的留白 (上/下 25px, 左/右 15px) */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* 柔和的阴影 */
+    
+    /* 可选：鼠标悬停时的上浮效果 */
+    transition: all 0.3s ease;
   }
+  .org-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+
+  /* === 3. 头像图片样式 (关键修改) === */
   .org-portrait {
     width: 100%;
-    height: 260px; /* 统一高度 */
-    object-fit: cover; /* 自动裁剪，防止拉伸 */
-    border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    background-color: #eee;
-    margin-bottom: 15px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px; /* 图片自身也要有点圆角 */
+    margin-bottom: 18px;
+    /* 注意：这里的旧阴影和背景色已经被移除，交给 .org-card 处理了 */
   }
+
+  /* === 4. 文字内容样式 === */
   .org-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 8px;
   }
   .org-info {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.4;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    padding: 0 5px; /* 防止文字太靠边 */
   }
-<style>
-  /* 简单的样式，确保邮箱显示美观 */
+  
+  /* === 5. 邮箱链接样式 === */
   .org-email {
     font-size: 0.9em;
-    color: #0077cc;
-    margin-top: 4px;
+    margin-top: 12px;
   }
   .org-email a {
     text-decoration: none;
-    color: inherit;
+    color: #0077cc;
+    font-weight: 600;
+    transition: color 0.2s;
   }
   .org-email a:hover {
+    color: #0056b3;
     text-decoration: underline;
   }
 </style>
