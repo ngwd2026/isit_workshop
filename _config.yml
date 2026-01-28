@@ -2,10 +2,10 @@
 remote_theme             : "mmistakes/minimal-mistakes"
 
 # 2. 必须填 URL！否则 CSS 路径拼接错误
-url                      : "https://ngwd2026.github.io"
+url                      : "https://ngwd2026.github.io/isit_workshop/"
 
 # 3. 必须填 Baseurl！(对应你的仓库名 isit_workshop)
-baseurl                  : "/isit_workshop"
+#baseurl                  : "/isit_workshop"
 
 # 4. 仓库路径
 repository               : "ngwd2026/isit_workshop"
