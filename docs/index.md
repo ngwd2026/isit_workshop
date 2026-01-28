@@ -296,28 +296,35 @@ header:
   /* === 1. 人物排列网格 === */
   .org-grid {
     display: flex;
-    justify-content: center; /* 卡片整体居中，如果想左对齐改成 flex-start */
+    /* 改用 space-between 或 center */
+    justify-content: center; 
     flex-wrap: wrap;
-    gap: 30px; /* 增加卡片之间的间距 */
-    margin-top: 30px; /* 让卡片和标题之间有点距离 */
+    /* 关键点1：减小间距，从 30px -> 15px，给卡片腾出更多空间 */
+    gap: 15px; 
+    margin-top: 20px;
   }
 
   /* === 2. 单个人物卡片 === */
   .org-card {
-    /* 宽度设置：根据需要调整，30%左右一行能放3个 */
-    width: 30%; 
-    min-width: 250px; /* 稍微加大最小宽度，防止太窄 */
+    /* 关键点2：宽度设置为 30% ~ 32%，保证一行能放下3个 */
+    width: 31%; 
+    
+    /* 关键点3：减小最小宽度限制。之前是 250px 太宽了，改成 200px 或 210px */
+    min-width: 210px; 
     
     text-align: center;
     background-color: #ffffff; 
     border: 1px solid #e1e4e8;
     border-radius: 8px;
 
-    /* === 重点修改：增加内部留白 === */
-    /* 上下25px，左右30px -> 这样照片离边框就远了，像右图一样 */
-    padding: 25px 30px; 
+    /* 关键点4：调整内部留白。
+       上下保持 20px，左右改成 20px（之前是30px），既保留了留白感，又省了空间 */
+    padding: 20px 20px; 
     
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* 防止 padding 撑大盒子宽度 */
+    box-sizing: border-box;
   }
   
   .org-card:hover {
@@ -328,31 +335,30 @@ header:
   /* === 3. 照片样式 === */
   .org-portrait {
     width: 100%;
-    /* === 重点保持：高度不变 === */
-    height: 220px; 
-    /* 确保裁剪正常，人脸不拉伸 */
+    /* 稍微把高度从 220px 调小到 200px，因为卡片变窄了，这样比例更好看 */
+    height: 200px; 
     object-fit: cover; 
-    object-position: top; /* 优先显示头部 */
-    border-radius: 4px; /* 照片圆角稍微小一点，更显正式 */
-    margin-bottom: 15px;
+    object-position: top;
+    border-radius: 4px;
+    margin-bottom: 12px;
   }
 
   /* === 4. 文字信息 === */
   .org-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* 字体微调 */
     font-weight: bold;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   .org-info {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #666;
-    line-height: 1.4;
+    line-height: 1.3;
   }
   .org-email {
-    font-size: 0.85em;
-    margin-top: 12px;
-    word-break: break-all;
+    font-size: 0.8em;
+    margin-top: 10px;
+    word-break: break-all; /* 防止长邮箱撑破布局 */
   }
   .org-email a {
     text-decoration: none;
@@ -362,30 +368,21 @@ header:
   .org-email a:hover {
     text-decoration: underline;
   }
-  
-  /* 标题修正样式 */
+
+  /* 标题保持左对齐 */
   .section-title {
-    /* 确保标题左对齐，没有额外的左边距 */
     text-align: left;
     margin-left: 0;
     padding-left: 0;
     margin-bottom: 20px;
+    color: #0056b3; /* 你的图片里标题是蓝色的，顺便加个色 */
   }
 </style>
 
-<!-- 
-  修改说明：
-  去掉了最外层 div 的 style="padding: 40px 20px !important;"
-  这个 padding 是导致你的标题 "太靠右" 的原因。
-  现在外层容器只保留 class，不再强制加内边距。
--->
 <div class="section-box">
-
-  <!-- 给 H2 加一个类，或者确保它不受居中影响 -->
   <h2 id="organizers" class="section-title">Workshop Organizers</h2>
 
   <div class="org-grid">
-
     <!-- 第一位 -->
     <div class="org-card">
       <img src="{{ '/assets/images/Liu.jpg' | relative_url }}" class="org-portrait" alt="Lei Liu">
@@ -415,6 +412,5 @@ header:
         <a href="mailto:yao.ge@ntu.edu.sg">yao.ge@ntu.edu.sg</a>
       </div>
     </div>
-
   </div>
 </div>
