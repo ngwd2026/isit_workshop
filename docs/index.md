@@ -315,61 +315,59 @@ header:
   }
 
 <style>
-  /* === 人物排列网格 === */
+  /* === 1. 人物排列网格 === */
   .org-grid {
     display: flex;
-    justify-content: center; /* 居中排列 */
-    gap: 30px; /* 卡片间距 */
-    flex-wrap: wrap;
-    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* 允许在手机上换行，但在电脑上会尽量横排 */
+    gap: 20px;       /*稍微减小间距，更容易排下一行 */
   }
 
-  /* === 单个人物卡片 === */
+  /* === 2. 单个人物卡片 === */
   .org-card {
-    width: 220px;
+    /* 关键修改：用百分比宽度，保证一行能塞下3个 */
+    width: 30%; 
+    min-width: 180px; /* 最小不小于180px，防止手机上太挤 */
+    
     text-align: center;
-    /* 让卡片背景是纯白，这样能在淡蓝色的 section-box 里凸显出来 */
     background-color: #ffffff; 
     border: 1px solid #e1e4e8;
     border-radius: 8px;
-    padding: 25px 10px;
+    padding: 20px 5px; /* 稍微减小内部左右边距 */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  /* 鼠标悬停效果 */
   .org-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
 
-  /* === 照片样式 === */
+  /* === 3. 照片样式 === */
   .org-portrait {
     width: 100%;
-    height: 250px;
+    /* 稍微减小照片高度，保持比例 */
+    height: 220px; 
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 15px;
-    /* 移除照片自带的边框，因为现在有卡片边框了 */
   }
 
-  /* === 名字和信息样式 === */
+  /* === 4. 文字信息 === */
   .org-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* 稍微调小字号防止换行 */
     font-weight: bold;
     color: #333;
     margin-bottom: 8px;
   }
   .org-info {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #666;
-    line-height: 1.4;
+    line-height: 1.3;
   }
-  
-  /* === 邮箱样式 === */
   .org-email {
-    font-size: 0.85em;
+    font-size: 0.8em;
     margin-top: 10px;
-    word-break: break-all; /* 防止邮箱太长撑破卡片 */
+    word-break: break-all;
   }
   .org-email a {
     text-decoration: none;
@@ -381,7 +379,7 @@ header:
   }
 </style>
 
-<div class="section-box">
+<div class="section-box" style="padding: 40px 20px !important;">
 
   <h2 id="organizers">Workshop Organizers</h2>
 
