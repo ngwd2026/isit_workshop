@@ -101,61 +101,40 @@ header:
 
   /* 7. Organizers 样式 (照片长方形) */
 /* 7. Organizers 样式 (照片长方形) */
-<h2 id="organizers" style="border-bottom: 1px solid #eee; padding-bottom: 10px;">Workshop Organizers</h2>
-
-<style>
-  .org-grid {
-    display: flex;
-    justify-content: center;
-    gap: 50px; /* 间距 */
-    flex-wrap: wrap;
-    margin-top: 30px;
+  .organizer-grid { 
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    text-align: center !important; 
   }
-  .org-card {
-    width: 200px; /* 调整卡片宽度 */
-    text-align: center;
+  .organizer-item { width: 30%; margin-bottom: 20px; }
+  
+  /* 照片改为长方形 */
+  .organizer-item img { 
+    border-radius: 6px !important; 
+    width: 150px !important; 
+    height: 200px !important; 
+    object-fit: cover !important; 
+    border: 3px solid #f0f0f0; 
+    background-color: #ddd; /* 占位色 */
   }
-  .org-portrait {
-    width: 100%;
-    height: 260px; /* 统一高度 */
-    object-fit: cover; /* 自动裁剪，防止拉伸 */
-    border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    background-color: #eee;
-    margin-bottom: 15px;
+  
+  /* 【关键修改】Organizers 人名黑色加粗 */
+  .organizer-item h3 { 
+      text-align: center !important; 
+      margin-bottom: 5px !important;
+      color: #000 !important; /* 黑色 */
+      font-weight: bold !important; /* 加粗 */
   }
-  .org-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
+  
+  .organizer-item p { 
+    text-align: center !important; 
+    font-size: 0.85em !important; 
+    line-height: 1.4 !important;    
+    color: #444;
   }
-  .org-info {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.4;
-  }
-</style>
-
-<div class="org-grid">
-  <div class="org-card">
-    <img src="{{ '/assets/images/Liu.jpg' | relative_url }}" class="org-portrait" alt="Lei Liu">
-    <div class="org-name">Lei Liu</div>
-    <div class="org-info">Zhejiang University, China</div>
-  </div>
-
-  <div class="org-card">
-    <img src="{{ '/assets/images/Chi.jpg' | relative_url }}" class="org-portrait" alt="Yuhao Chi">
-    <div class="org-name">Yuhao Chi</div>
-    <div class="org-info">Xidian University, China</div>
-  </div>
-
-  <div class="org-card">
-    <img src="{{ '/assets/images/Ge.jpg' | relative_url }}" class="org-portrait" alt="Yao Ge">
-    <div class="org-name">Yao Ge</div>
-    <div class="org-info">Nanyang Technological University</div>
-  </div>
-</div>
+  
+  .btn--info { margin-top: 10px; display: inline-block; background-color: #0056b3 !important; border-color: #0056b3 !important; }
 
   /* 8. 封面标题样式 */
   .page__hero--overlay .page__title,
@@ -293,3 +272,58 @@ header:
 </div>
 
 
+<h2 id="organizers" style="border-bottom: 1px solid #eee; padding-bottom: 10px;">Workshop Organizers</h2>
+
+<style>
+  .org-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* 间距 */
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .org-card {
+    width: 200px; /* 调整卡片宽度 */
+    text-align: center;
+  }
+  .org-portrait {
+    width: 100%;
+    height: 260px; /* 统一高度 */
+    object-fit: cover; /* 自动裁剪，防止拉伸 */
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #eee;
+    margin-bottom: 15px;
+  }
+  .org-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .org-info {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+  }
+</style>
+
+<div class="org-grid">
+  <div class="org-card">
+    <img src="{{ '/assets/images/Liu.jpg' | relative_url }}" class="org-portrait" alt="Lei Liu">
+    <div class="org-name">Lei Liu</div>
+    <div class="org-info">Zhejiang University, China</div>
+  </div>
+
+  <div class="org-card">
+    <img src="{{ '/assets/images/Chi.jpg' | relative_url }}" class="org-portrait" alt="Yuhao Chi">
+    <div class="org-name">Yuhao Chi</div>
+    <div class="org-info">Xidian University, China</div>
+  </div>
+
+  <div class="org-card">
+    <img src="{{ '/assets/images/Ge.jpg' | relative_url }}" class="org-portrait" alt="Yao Ge">
+    <div class="org-name">Yao Ge</div>
+    <div class="org-info">Nanyang Technological University</div>
+  </div>
+</div>
