@@ -317,29 +317,33 @@ header:
     cursor: pointer;
   }
   
-  /* === 1. 整体容器布局 === */
+/* === 1. 整体容器布局 === */
   .org-grid {
     display: flex;
     justify-content: center; 
     flex-wrap: wrap;
-    gap: 20px; /* 卡片间距 */
+    gap: 50px; /* 【改动1】间距变大：由 20px 增加到 50px */
     margin-top: 20px;
-    align-items: stretch; /* 让所有卡片的高度自动拉伸一致 */
+    align-items: stretch;
   }
 
   /* === 2. 单个卡片样式 === */
   .org-card {
-    width: 30%; 
-    min-width: 220px; /* 保证手机上不会太窄 */
-    
+    /* 【改动2】宽度调整： */
+    width: 22%;          /* 稍微减小百分比 */
+    min-width: 200px;    /* 手机端最小宽度 */
+    max-width: 240px;    /* 【关键】限制最大宽度，这样在大屏幕上也不会变得很大 */
+
     background-color: #ffffff; 
     border: 1px solid #e1e4e8;
     border-radius: 8px;
-    padding: 20px 20px; 
+    
+    /* 【改动3】内边距减小：让卡片看起来更紧凑 */
+    padding: 15px 15px;  
     
     display: flex;
-    flex-direction: column; /* 垂直排列内容 */
-    align-items: center;    /* 内容居中 */
+    flex-direction: column; 
+    align-items: center;    
     
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
@@ -350,31 +354,23 @@ header:
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
 
-  /* === 3. 照片样式 (核心修改) === */
+  /* === 3. 照片样式 === */
   .org-portrait {
     width: 100%;
-    
-    /* 【关键点1】强制设置纵横比为 3:4 (标准半身照比例) */
-    /* 这样无论原图多高多宽，这里显示的形状都一样 */
     aspect-ratio: 3 / 4; 
-    
-    /* 保持填充，不拉伸变形 */
     object-fit: cover; 
-    
-    /* 焦点定位在顶部中间，确保头部和肩膀不被切掉 */
     object-position: top center; 
-    
     border-radius: 4px;
-    margin-bottom: 15px;
+    margin-bottom: 12px; /* 图片下方的间距稍微减小 */
   }
 
   /* === 4. 文字信息样式 === */
   .org-name {
-    font-size: 1.15rem;
+    /* 【改动4】字号微调：配合小卡片，字号稍微改小一点点 */
+    font-size: 1.05rem; 
     font-weight: bold;
     color: #333;
-    margin-bottom: 8px;
-    /* 固定名字区域高度，防止有的名字太长换行导致错位 */
+    margin-bottom: 6px;
     min-height: 1.4em; 
   }
 
@@ -383,13 +379,9 @@ header:
     color: #666;
     line-height: 1.4;
     text-align: center;
+    /* 高度稍微减小，因为卡片变窄了，换行可能会多，保持弹性 */
+    min-height: 60px; 
     
-    /* 【关键点2】强制学校介绍区域的高度 */
-    /* 这里的 60px 大约是 3 行文字的高度。 */
-    /* 即使前两个人的介绍只有 2 行，也会占 3 行的空间，从而把下面的邮箱“顶”到同一水平线 */
-    min-height: 65px; 
-    
-    /* 让文字在区域内稍微居中一点，或者靠上对齐 */
     display: flex;
     align-items: flex-start; 
     justify-content: center;
