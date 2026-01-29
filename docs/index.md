@@ -302,20 +302,19 @@ header:
 <div class="section-box">
   <h2>Invited Speaker</h2>
   
-  <div style="text-align: center; padding: 20px 0;">
-    <h3 style="margin: 0 0 10px 0; font-size: 1.5rem;">
-      <a href="https://www.unsw.edu.au/staff/jinhong-yuan" target="_blank" style="text-decoration: none; color: #0056b3; font-weight: bold;">
-        Jinhong Yuan
+  <div style="padding: 10px 0 20px 0; text-align: left;">
+    <div style="margin-bottom: 5px;">
+      <a href="https://www.unsw.edu.au/staff/jinhong-yuan" target="_blank" 
+         style="text-decoration: none; color: #000; font-weight: 800; font-size: 1.1rem; font-family: 'Open Sans', sans-serif;">
+        Prof. Jinhong Yuan (IEEE Fellow)
       </a>
-    </h3>
+    </div>
     
-    <p style="font-size: 1.1rem; color: #555; margin: 0; line-height: 1.6;">
-      University of New South Wales,<br>
-      Australia
-    </p>
+    <div style="font-size: 0.95rem; color: #444; font-family: 'Open Sans', sans-serif;">
+      University of New South Wales, Australia
+    </div>
   </div>
 </div>
-
 
 <style>
 
