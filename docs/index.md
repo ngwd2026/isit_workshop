@@ -273,7 +273,15 @@ header:
 
 <div id="submission"></div>
 <div class="section-box">
-  <h2>Important Dates</h2>
+  <h2>Paper Submission and Dates</h2>
+  
+  <div style="text-align: justify; margin-bottom: 30px;">
+    <p>
+      Submission will be handled via EDAS. The paper format follows the main ISIT conference guidelines.
+    </p>
+  </div>
+  
+  <h3>Important Dates</h3>
   
   <table class="dates-table">
     <tr>
