@@ -387,20 +387,34 @@ header:
     justify-content: center;
   }
 
-  .org-email {
-    font-size: 0.6rem;
-    margin-top: 10px; /* 邮箱距离上面的间距 */
-    word-break: break-all;
+.org-email {
+    /* 【改动1】字体调小：建议直接用 px 精确控制，12px 或 11px 通常比较合适 */
+    font-size: 11px !important; 
     
-    /* 确保邮箱在卡片最底部稍微有点弹性 */
-    margin-bottom: 5px; 
+    /* 【改动2】强制不换行：这是核心，保证邮箱只在一行显示 */
+    white-space: nowrap !important;
+    
+    /* 【改动3】去掉之前的强制打断属性，改回 normal */
+    word-break: normal !important;
+    
+    margin-top: 8px; /* 稍微调整一下间距 */
+    margin-bottom: 5px;
+    
+    /* 增加宽度容错，防止溢出 */
+    width: 100%;
+    overflow: hidden; 
+    text-overflow: ellipsis; /* 如果实在太长放不下，会显示省略号...（通常邮箱够短不会触发） */
   }
   
   .org-email a {
     text-decoration: none;
     color: #0077cc;
     font-weight: 600;
+    
+    /* 确保链接也是内联块级元素，接受对齐 */
+    display: inline-block; 
   }
+  
   .org-email a:hover {
     text-decoration: underline;
   }
