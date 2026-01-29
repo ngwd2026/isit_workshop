@@ -402,6 +402,7 @@ header:
     
     /* 增加宽度容错，防止溢出 */
     width: 100%;
+    text-align: center !important;
     overflow: hidden; 
     text-overflow: ellipsis; /* 如果实在太长放不下，会显示省略号...（通常邮箱够短不会触发） */
   }
