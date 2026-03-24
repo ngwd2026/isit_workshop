@@ -277,16 +277,17 @@ header:
   
   <div style="text-align: justify; margin-bottom: 30px;">
     <p>
-      Submission will be handled via EDAS. The paper format follows the main ISIT conference guidelines.
+      Submission will be handled via <a href="https://edas.info/newPaper.php?c=34669&amp;track=135792" target="_blank" rel="noopener noreferrer">EDAS</a>. The paper format follows the main ISIT conference guidelines.
     </p>
-  </div>
+    
+    </div>
   
   <h3>Important Dates</h3>
   
   <table class="dates-table">
     <tr>
       <td class="label-col">Paper Submission Deadline:</td>
-      <td class="date-col">07 April, 2026(firm)</td>
+      <td class="date-col">07 April, 2026 (firm)</td>
     </tr>
     <tr>
       <td class="label-col">Acceptance Notification:</td>
