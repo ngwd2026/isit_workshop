@@ -302,18 +302,33 @@ header:
 
 
 
+<div class="section-box">
+  <h2>Invited Speaker</h2>
 <div style="padding: 10px 0 20px 0; text-align: left;">
-    <div style="margin-bottom: 5px;">
-      <a href="https://www.unsw.edu.au/staff/jinhong-yuan" target="_blank" 
-         style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
-        Prof. Jinhong Yuan (IEEE Fellow)
-      </a>
-    </div>
-    
-    <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif;">
-      University of New South Wales, Australia
-    </div>
+  <div style="margin-bottom: 5px;">
+    <a href="https://www.unsw.edu.au/staff/jinhong-yuan" target="_blank" 
+       style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
+      Prof. Jinhong Yuan (IEEE Fellow)
+    </a>
   </div>
+  
+  <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif;">
+    University of New South Wales, Australia
+  </div>
+</div>
+
+<div style="padding: 10px 0 20px 0; text-align: left;">
+  <div style="margin-bottom: 5px;">
+    <a href="https://www.essex.ac.uk/people/LIUZI11203/zilong-liu" target="_blank" 
+       style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
+      Dr. Zilong Liu (IEEE Senior Member)
+    </a>
+  </div>
+  
+  <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif;">
+    University of Essex, UK
+  </div>
+</div>
 </div>
 
 
