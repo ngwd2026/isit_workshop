@@ -300,13 +300,10 @@ header:
   </table>
 </div>
 
+
+
 <div class="section-box">
   <h2>Invited Speaker</h2>
-  
-
-
-
-
 <div style="padding: 10px 0 20px 0; text-align: left;">
   <div style="margin-bottom: 5px;">
     <a href="https://www.unsw.edu.au/staff/jinhong-yuan" target="_blank" 
