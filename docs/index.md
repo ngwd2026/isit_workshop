@@ -333,7 +333,6 @@ header:
 
 
 
-
 <style>
   /* 基础框样式 */
   .section-box {
@@ -396,7 +395,7 @@ header:
   .item-title {
     font-weight: 600;
     color: #24292e;
-    font-size: 1rem;  /* 统一字体大小 */
+    font-size: 1rem;
     margin-bottom: 6px;
     line-height: 1.5;
   }
@@ -412,12 +411,30 @@ header:
     color: #444;
   }
 
-  /* 展开/折叠控件样式（重置默认样式，保证不被放大） */
+  /* 重置 summary 默认样式，保证字体大小不被覆盖 */
   details summary {
+    font-size: inherit;
+    font-weight: inherit;
     cursor: pointer;
     outline: none;
+    list-style: none; /* 隐藏默认三角符号 */
     transition: color 0.2s ease;
-    list-style-position: inside;
+  }
+  
+  /* 自定义折叠提示的小箭头 */
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  details summary::before {
+    content: "▶ ";
+    font-size: 0.75rem;
+    color: #0366d6;
+    margin-right: 4px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+  details[open] summary::before {
+    transform: rotate(90deg);
   }
 
   details summary:hover .item-title {
@@ -463,7 +480,6 @@ header:
 </style>
 
 <div class="section-box">
-  <!-- 这里替换成了你想要的小标题格式 -->
   <h2 style="margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid #eaecef; padding-bottom: 10px;">Workshop Program</h2>
 
   <!-- ================= Session 1 ================= -->
@@ -484,12 +500,10 @@ header:
       <div class="item-time">10:30 - 11:10</div>
       <div class="item-content">
         <details>
-          <!-- 将 Title 和 Speaker 放在 summary 里，保证折叠时始终可见 -->
           <summary>
             <span class="item-title">Keynote: Rethinking Waveform for 6G Communications and Sensing: Delay-Doppler Alignment Modulation (DDAM)</span>
-            <div class="item-authors" style="margin-top: 4px; font-weight: normal;">
+            <div class="item-authors" style="margin-top: 4px;">
               <span class="author-label">Speaker:</span> Prof. Yong Zeng
-              <span style="color: #0366d6; font-size: 0.8rem; margin-left: 8px;">(Click to view abstract)</span>
             </div>
           </summary>
           <div class="overview-text">
@@ -555,12 +569,10 @@ header:
       <div class="item-time">14:00 - 14:40</div>
       <div class="item-content">
         <details>
-          <!-- 将 Title 和 Speaker 放在 summary 里 -->
           <summary>
             <span class="item-title">Keynote: On Modulation Waveforms for 6G High-Mobility Communications: OFDM, OTFS, or DD-a-OFDM?</span>
-            <div class="item-authors" style="margin-top: 4px; font-weight: normal;">
+            <div class="item-authors" style="margin-top: 4px;">
               <span class="author-label">Speaker:</span> Prof. Zhiqiang Wei
-              <span style="color: #0366d6; font-size: 0.8rem; margin-left: 8px;">(Click to view abstract)</span>
             </div>
           </summary>
           <div class="overview-text">
