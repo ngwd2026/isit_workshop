@@ -345,293 +345,135 @@ header:
 
 
 
-<style>
-  /* 基础框样式 */
-  .section-box {
-    border: 1px solid #e1e4e8;
-    border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  }
-
-  .session-block {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-left: 4px solid #0366d6;
-    padding-left: 16px;
-  }
-
-  .session-time {
-    font-weight: 700;
-    color: #0366d6;
-    font-size: 1.1rem;
-    margin-bottom: 16px;
-    border-bottom: 2px solid #f1f8ff;
-    padding-bottom: 8px;
-    display: inline-block;
-  }
-
-  /* 左右分栏的列表项 */
-  .agenda-item {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 16px 0;
-    border-bottom: 1px dashed #eaecef;
-  }
-  
-  .agenda-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  /* 左侧时间块 */
-  .item-time {
-    min-width: 95px;
-    flex-shrink: 0;
-    font-weight: 600;
-    color: #586069;
-    font-size: 0.95rem;
-    padding-top: 2px;
-  }
-
-  /* 右侧内容块 */
-  .item-content {
-    flex-grow: 1;
-  }
-
-  /* 统一所有标题的字体和大小 */
-  .item-title {
-    font-weight: 600;
-    color: #24292e;
-    font-size: 0.88rem;
-    margin-bottom: 6px;
-    line-height: 1.5;
-  }
-
-  .item-authors {
-    color: #586069;
-    font-size: 0.88rem;
-    line-height: 1.5;
-  }
-
-  .author-label {
-    font-weight: 600;
-    color: #444;
-  }
-
-  /* 重置 summary 默认样式，保证字体大小不被覆盖 */
-  details summary {
-    font-size: inherit;
-    font-weight: inherit;
-    cursor: pointer;
-    outline: none;
-    list-style: none; /* 隐藏默认三角符号 */
-    transition: color 0.2s ease;
-  }
-  
-  /* 自定义折叠提示的小箭头 */
-  details summary::-webkit-details-marker {
-    display: none;
-  }
-  details summary::before {
-    content: "▶ ";
-    font-size: 0.75rem;
-    color: #0366d6;
-    margin-right: 4px;
-    display: inline-block;
-    transition: transform 0.2s ease;
-  }
-  details[open] summary::before {
-    transform: rotate(90deg);
-  }
-
-  details summary:hover .item-title {
-    color: #0366d6;
-  }
-
-  .overview-text {
-    margin-top: 12px;
-    padding: 16px;
-    background-color: #f6f8fa;
-    border-left: 3px solid #d1d5da;
-    border-radius: 0 4px 4px 0;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #444;
-    text-align: justify;
-  }
-  
-  .break-block {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-weight: 600;
-    color: #d73a49;
-    padding: 16px 0;
-    margin: 20px 0;
-    background-color: #fffbdd;
-    border-radius: 6px;
-    padding-left: 20px;
-  }
-  
-  /* 手机端适配 */
-  @media (max-width: 600px) {
-    .agenda-item {
-      flex-direction: column;
-      gap: 6px;
-    }
-    .item-time {
-      color: #0366d6;
-      font-size: 0.9rem;
-    }
-  }
-</style>
-
 <div class="section-box">
-  <h2 style="margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid #eaecef; padding-bottom: 10px;">Workshop Program</h2>
+  <h2>Workshop Program (July 03, 2026)</h2>
 
-  <!-- ================= Session 1 ================= -->
-  <div class="session-block">
-    <div class="session-time">09:50 – 11:10 | Technical Session 1 (Invited Talks)</div>
-    
-    <!-- Item 1 -->
-    <div class="agenda-item">
-      <div class="item-time">09:50 - 10:30</div>
-      <div class="item-content">
-        <div class="item-title">Keynote 1: (Title to be updated)</div>
-        <div class="item-authors"><span class="author-label">Speaker:</span> Prof. Jinhong Yuan</div>
-      </div>
-    </div>
+  <!-- Session 1 -->
+  <details open>
+    <summary>09:50 – 11:10 | Technical Session 1 (Invited Talks)</summary>
+    <table class="program-table">
+      <tr>
+        <td class="time-col">09:50 – 10:30</td>
+        <td>
+          <strong>Keynote 1</strong><br>
+          <span style="color:#555; font-size:0.95em;">Invited Speaker: Prof. Jinhong Yuan</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">10:30 – 11:10</td>
+        <td>
+          <strong>Keynote 2</strong><br>
+          <span style="color:#555; font-size:0.95em;">Invited Speaker: Prof. Zilong Liu</span>
+        </td>
+      </tr>
+    </table>
+  </details>
 
-    <!-- Item 2 -->
-    <div class="agenda-item">
-      <div class="item-time">10:30 - 11:10</div>
-      <div class="item-content">
-        <details>
-          <summary>
-            <span class="item-title">Keynote: Rethinking Waveform for 6G Communications and Sensing: Delay-Doppler Alignment Modulation (DDAM)</span>
-            <div class="item-authors" style="margin-top: 4px;">
-              <span class="author-label">Speaker:</span> Prof. Yong Zeng
-            </div>
-          </summary>
-          <div class="overview-text">
-            <strong>Overview:</strong> Conventional multi-carrier waveforms based on time-frequency domain modulation face problems such as high peak-to-average power ratio (PAPR), serious out-of-band leakage, sensitivity to inter-carrier interference, and high cyclic prefix overhead. For future wireless systems, with the use of larger antenna arrays, higher frequency bands, and more powerful sensing capabilities, new opportunities arise for the design of wireless waveforms for 6G and beyond. To this end, this talk intends to explore the high spatial resolution of large antenna arrays and the multipath sparsity of high-frequency signals, and introduce the novel framework of Delay-Doppler alignment modulation (DDAM) based on joint processing in space-delay-Doppler domains. DDAM leverages path-based beamforming to distinguish multipath signals in the spatial domain, enabling per-path based delay and Doppler compensation and alignment. This will greatly reduce the delay Doppler spread of the channel and thus avoid the complicated channel equalization or large dimensional multi-carrier transmission. The talk will first introduce the background and motivation for proposing DDAM, and then introduce single-carrier and multi-carrier DDAM communications, followed by DDAM integrated sensing and communication (ISAC). Finally, preliminary experimental verification results are introduced.
-          </div>
-        </details>
-      </div>
-    </div>
+  <!-- Tea Break -->
+  <div style="background-color: #eaf5ff; padding: 12px 20px; border-radius: 6px; margin-bottom: 15px; color: #0056b3; font-weight: bold; border-left: 4px solid #0056b3;">
+    11:10 – 11:30 | Tea Break
   </div>
 
-  <!-- ================= Tea Break ================= -->
-  <div class="break-block">
-    <span>☕</span> 11:10 – 11:30 | Tea Break
+  <!-- Session 2 -->
+  <details open>
+    <summary>11:30 – 12:50 | Technical Session 2 (Oral Presentation)</summary>
+    <table class="program-table">
+      <tr>
+        <td class="time-col">11:30 – 11:50</td>
+        <td>
+          <strong>Low-PAPR OFDM-Based DFRC Waveform Design with Constant-Modulus Modulation</strong><br>
+          <span style="color:#555; font-size:0.9em;">Authors: Shide Wang; Xiuping Peng and Tao Zheng (Yanshan University, China)</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">11:50 – 12:10</td>
+        <td>
+          <strong>Improved MRC Algorithm with Weighted Update Mechanism for Coded OTFS System</strong><br>
+          <span style="color:#555; font-size:0.9em;">Authors: Hui Chen, Jinhua Sun and Ke Dang (Xidian University, China)</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">12:10 – 12:30</td>
+        <td>
+          <strong>A Universal Random Precoding Framework for MIMO Systems</strong><br>
+          <span style="color:#555; font-size:0.9em;">Authors: Jiazhen Dong and Lei Liu (Zhejiang University, China); Xiaojun Yuan (UESTC, China); Baoming Bai (Xidian University, China)</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">12:30 – 12:50</td>
+        <td>
+          <strong>Non-Coherent Transmission Meets OFDM in Presence of CFO: TDS or FDS?</strong><br>
+          <span style="color:#555; font-size:0.9em;">Authors: Yiding Wang, Sirui Miao and Neng Ye (Beijing Institute of Technology, China)</span>
+        </td>
+      </tr>
+    </table>
+  </details>
+
+  <!-- Lunch Break -->
+  <div style="background-color: #eaf5ff; padding: 12px 20px; border-radius: 6px; margin-bottom: 15px; color: #0056b3; font-weight: bold; border-left: 4px solid #0056b3;">
+    12:50 – 14:00 | Lunch Break
   </div>
 
-  <!-- ================= Session 2 ================= -->
-  <div class="session-block">
-    <div class="session-time">11:30 – 12:50 | Technical Session 2 (Oral Presentation)</div>
-    
-    <div class="agenda-item">
-      <div class="item-time">11:30 - 11:50</div>
-      <div class="item-content">
-        <div class="item-title">Low-PAPR OFDM-Based DFRC Waveform Design with Constant-Modulus Modulation</div>
-        <div class="item-authors"><span class="author-label">Authors:</span> Shide Wang (Yan Shan University, China); Xiuping Peng and Tao Zheng (Yanshan University, China)</div>
-      </div>
-    </div>
-    
-    <div class="agenda-item">
-      <div class="item-time">11:50 - 12:10</div>
-      <div class="item-content">
-        <div class="item-title">Improved MRC Algorithm with Weighted Update Mechanism for Coded OTFS System</div>
-        <div class="item-authors"><span class="author-label">Authors:</span> Hui Chen, Jinhua Sun and Ke Dang (Xidian University, China)</div>
-      </div>
-    </div>
+  <!-- Session 3 -->
+  <details open>
+    <summary>14:00 – 15:20 | Technical Session 3 (Invited Talks)</summary>
+    <table class="program-table">
+      <tr>
+        <td class="time-col">14:00 – 14:40</td>
+        <td>
+          <strong>Keynote 3</strong><br>
+          <span style="color:#555; font-size:0.95em;">Invited Speaker: Prof. Yong Zeng</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">14:40 – 15:20</td>
+        <td>
+          <strong>Keynote 4</strong><br>
+          <span style="color:#555; font-size:0.95em;">Invited Speaker: Prof. Zhiqiang Wei</span>
+        </td>
+      </tr>
+    </table>
+  </details>
 
-    <div class="agenda-item">
-      <div class="item-time">12:10 - 12:30</div>
-      <div class="item-content">
-        <div class="item-title">A Universal Random Precoding Framework for MIMO Systems</div>
-        <div class="item-authors"><span class="author-label">Authors:</span> Jiazhen Dong and Lei Liu (Zhejiang University, China); Xiaojun Yuan (University of Electronic Science and Technology of China, China); Baoming Bai (Xidian University, China)</div>
-      </div>
-    </div>
-
-    <div class="agenda-item">
-      <div class="item-time">12:30 - 12:50</div>
-      <div class="item-content">
-        <div class="item-title">Non-Coherent Transmission Meets OFDM in Presence of CFO: TDS or FDS?</div>
-        <div class="item-authors"><span class="author-label">Authors:</span> Yiding Wang, Sirui Miao and Neng Ye (Beijing Institute of Technology, China)</div>
-      </div>
-    </div>
+  <!-- Tea Break 2 -->
+  <div style="background-color: #eaf5ff; padding: 12px 20px; border-radius: 6px; margin-bottom: 15px; color: #0056b3; font-weight: bold; border-left: 4px solid #0056b3;">
+    15:20 – 15:40 | Tea Break
   </div>
 
-  <!-- ================= Lunch Break ================= -->
-  <div class="break-block" style="color: #28a745; background-color: #f0fdf4;">
-    <span>🍽️</span> 12:50 – 14:00 | Lunch Break
-  </div>
-
-  <!-- ================= Session 3 ================= -->
-  <div class="session-block">
-    <div class="session-time">14:00 – 14:40 | Technical Session 3 (Invited Talks)</div>
-    
-    <div class="agenda-item">
-      <div class="item-time">14:00 - 14:40</div>
-      <div class="item-content">
-        <details>
-          <summary>
-            <span class="item-title">Keynote: On Modulation Waveforms for 6G High-Mobility Communications: OFDM, OTFS, or DD-a-OFDM?</span>
-            <div class="item-authors" style="margin-top: 4px;">
-              <span class="author-label">Speaker:</span> Prof. Zhiqiang Wei
-            </div>
-          </summary>
-          <div class="overview-text">
-            <strong>Overview:</strong> This course focuses on modulation waveform design for 6G high-mobility communications, and systematically introduces the fundamental concepts and signal processing methods of representative waveform schemes, including orthogonal frequency-division multiplexing (OFDM), orthogonal time frequency space (OTFS) modulation, and delay-Doppler domain-aided OFDM (DD-a-OFDM). The course begins by reviewing the basic concepts, core design criteria, and candidate waveform classifications for 6G high-mobility communications. It then proceeds from the challenges faced by OFDM in high-mobility scenarios to introduce the fundamental theory and signal processing methods of delay-Doppler (DD) domain communications, including DD-domain channel estimation and DD-domain multi-antenna transceiver signal processing. To further promote the compatibility and integration of DD-domain modulation waveforms with existing OFDM-based systems, the course presents DD-a-OFDM technology, analyzing how it introduces DD-domain signal processing to assist OFDM transmission while remaining compatible with the 5G NR OFDM framework, thereby striking a balance among Doppler resilience, system compatibility, and implementation complexity. This course is expected to provide waveform design references for the technological development of future applications such as low altitude communications, satellite communications, and integrated sensing and communications.
-          </div>
-        </details>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= Session 4 ================= -->
-  <div class="session-block">
-    <div class="session-time">14:40 – 16:00 | Technical Session 4 (Oral Presentation)</div>
-    
-    <div class="agenda-item">
-      <div class="item-time">14:40 - 15:00</div>
-      <div class="item-content">
-        <div class="item-title">Joint Iterative Detection and Decoding for LDPC-Coded Faster-than-Nyquist Systems</div>
-        <div class="item-authors"><span class="author-label">Authors:</span> Hong Wang, Tongzhou Yu, Jian Fang and Baoming Bai (Xidian University, China); Dan Feng (Xi'an University of Posts and Telecommunications, China)</div>
-      </div>
-    </div>
-    
-    <div class="agenda-item">
-      <div class="item-time">15:00 - 15:20</div>
-      <div class="item-content">
-        <div class="item-title">Storage-Efficient and High-Reliability Interleaved Transform for Enhanced Random Multiplexing</div>
-        <div class="item-authors"><span class="author-label">Authors:</span> Ming Wang (Communication University of China, China); Lei Liu (Zhejiang University, China); Shufeng Li (Communication University of China, China); Yuhao Chi (Xidian University, China)</div>
-      </div>
-    </div>
-
-    <div class="agenda-item">
-      <div class="item-time">15:20 - 15:40</div>
-      <div class="item-content">
-        <div class="item-title">Neural Network-Based Hybrid Digital-Analog Beamformer Design for Wideband Massive MIMO Systems with Large-Scale Users</div>
-        <div class="item-authors"><span class="author-label">Authors:</span> Haojie Cheng (Southeast University, China); Beiyuan Liu (Northwestern Polytechnical University, China); Liquan Chen (Southeast University, China); Julian Cheng (University of British Columbia, Canada & Great Bay University, China)</div>
-      </div>
-    </div>
-
-    <div class="agenda-item">
-      <div class="item-time">15:40 - 16:00</div>
-      <div class="item-content">
-        <div class="item-title">Unified Analytical Model for Atomic Receivers Under Typical Quantum Interference Paths</div>
-        <div class="item-authors"><span class="author-label">Authors:</span> Yiyue Xiang and Neng Ye (Beijing Institute of Technology), Qihao Peng and Pei Xiao (University of Surrey, United Kingdom), Jianping An (Beijing Institute of Technology, China)</div>
-      </div>
-    </div>
-  </div>
-
+  <!-- Session 4 -->
+  <details open>
+    <summary>15:40 – 17:00 | Technical Session 4 (Oral Presentation)</summary>
+    <table class="program-table">
+      <tr>
+        <td class="time-col">15:40 – 16:00</td>
+        <td>
+          <strong>Joint Iterative Detection and Decoding for LDPC-Coded Faster-than-Nyquist Systems</strong><br>
+          <span style="color:#555; font-size:0.9em;">Authors: Hong Wang, Tongzhou Yu, Jian Fang and Baoming Bai (Xidian University, China); Dan Feng (Xi'an University of Posts and Telecommunications, China)</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">16:00 – 16:20</td>
+        <td>
+          <strong>Storage-Efficient and High-Reliability Interleaved Transform for Enhanced Random Multiplexing</strong><br>
+          <span style="color:#555; font-size:0.9em;">Authors: Ming Wang (Communication University of China, China); Lei Liu (Zhejiang University, China); Shufeng Li (Communication University of China, China); Yuhao Chi (Xidian University, China)</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">16:20 – 16:40</td>
+        <td>
+          <strong>Neural Network-Based Hybrid Digital-Analog Beamformer Design for Wideband Massive MIMO Systems with Large-Scale Users</strong><br>
+          <span style="color:#555; font-size:0.9em;">Authors: Haojie Cheng and Liquan Chen (Southeast University, China); Beiyuan Liu (Northwestern Polytechnical University, China); Julian Cheng (UBC, Canada & Great Bay University, China)</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">16:40 – 17:00</td>
+        <td>
+          <strong>Unified Analytical Model for Atomic Receivers Under Typical Quantum Interference Paths</strong><br>
+          <span style="color:#555; font-size:0.9em;">Authors: Yiyue Xiang, Neng Ye and Jianping An (Beijing Institute of Technology, China); Qihao Peng and Pei Xiao (University of Surrey, UK)</span>
+        </td>
+      </tr>
+    </table>
+  </details>
 </div>
 
 
