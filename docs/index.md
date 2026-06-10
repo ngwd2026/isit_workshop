@@ -304,32 +304,44 @@ header:
 
 <div class="section-box">
   <h2>Invited Speaker</h2>
-<div style="padding: 10px 0 20px 0; text-align: left;">
-  <div style="margin-bottom: 5px;">
-    <a href="https://www.unsw.edu.au/staff/jinhong-yuan" target="_blank" 
-       style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
-      Prof. Jinhong Yuan (IEEE Fellow)
-    </a>
+
+  <div style="padding: 10px 0 20px 0; text-align: left;">
+    <div style="margin-bottom: 5px;">
+      <a href="https://www.unsw.edu.au/staff/jinhong-yuan" target="_blank" 
+         style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
+        Prof. Jinhong Yuan (IEEE Fellow)
+      </a>
+    </div>
+    <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif;">
+      University of New South Wales, Australia
+    </div>
   </div>
-  
-  <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif;">
-    University of New South Wales, Australia
+
+  <div style="padding: 10px 0 20px 0; text-align: left;">
+    <div style="margin-bottom: 5px;">
+      <a href="https://oic.seu.edu.cn/oicenglish/2026/0522/c68505a568543/page.htm#:~:text=Prof.%20Zeng%20is%20internationally%20recognized%20for%20his%20pioneering,in%20the%20integration%20of%20aerial%20and%20ground%20networks" target="_blank" 
+         style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
+        Prof. Yong Zeng (IEEE Fellow)
+      </a>
+    </div>
+    <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif; line-height: 1.6;">
+      Southeast University and Purple Mountain Laboratory, Nanjing, China
+    </div>
+  </div>
+
+  <div style="padding: 10px 0 20px 0; text-align: left;">
+    <div style="margin-bottom: 5px;">
+      <a href="https://gr.xjtu.edu.cn/zqwei/" target="_blank" 
+         style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
+        Prof. Zhiqiang Wei
+      </a>
+    </div>
+    <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif; line-height: 1.6;">
+      Xi'an Jiaotong University, Xi'an, China
+    </div>
   </div>
 </div>
 
-<div style="padding: 10px 0 20px 0; text-align: left;">
-  <div style="margin-bottom: 5px;">
-    <a href="https://www.essex.ac.uk/people/LIUZI11203/zilong-liu" target="_blank" 
-       style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
-      Dr. Zilong Liu (IEEE Senior Member)
-    </a>
-  </div>
-  
-  <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif;">
-    University of Essex, UK
-  </div>
-</div>
-</div>
 
 
 
