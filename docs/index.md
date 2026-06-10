@@ -471,6 +471,115 @@ header:
 
 
 
+<div class="section-box">
+  <h2>Workshop</h2>
+
+  <div style="padding: 10px 0 15px 0; text-align: left;">
+    <div style="font-size: 1rem; font-weight: bold; margin-bottom: 8px;">
+      Next-Generation Waveforms Design for Communications, Sensing, and Integrated Systems: Information-Theoretic & Application Perspectives
+    </div>
+
+    <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif; line-height: 1.6;">
+      <div><strong>Chairs:</strong> Lei Liu, Yuhao Chi, and Yao Ge</div>
+      <div><strong>Room:</strong> TBD</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 20px;">Invited Speaker</h3>
+
+  <div style="padding: 10px 0 20px 0; text-align: left;">
+    <div style="margin-bottom: 5px;">
+      <a href="https://www.unsw.edu.au/staff/jinhong-yuan" target="_blank" 
+         style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
+        Prof. Jinhong Yuan
+      </a>
+    </div>
+    <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif;">
+      University of New South Wales, Australia
+    </div>
+  </div>
+
+  <div style="padding: 10px 0 20px 0; text-align: left;">
+    <div style="margin-bottom: 5px;">
+      <a href="#" target="_blank" 
+         style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
+        Prof. Yong Zeng
+      </a>
+    </div>
+    <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif;">
+      Southeast University and Purple Mountain Laboratory, China
+    </div>
+  </div>
+
+  <div style="padding: 10px 0 20px 0; text-align: left;">
+    <div style="margin-bottom: 5px;">
+      <a href="#" target="_blank" 
+         style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
+        Prof. Zhiqiang Wei
+      </a>
+    </div>
+    <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif;">
+      Xi'an Jiaotong University, China
+    </div>
+  </div>
+
+  <h3 style="margin-top: 20px;">Program Schedule</h3>
+
+  <div style="overflow-x: auto;">
+    <table style="width: 100%; border-collapse: collapse; font-family: 'Open Sans', sans-serif; font-size: 0.93rem;">
+      <thead>
+        <tr style="background: #f5f5f5;">
+          <th style="border: 1px solid #ddd; padding: 10px; text-align: left;">Time</th>
+          <th style="border: 1px solid #ddd; padding: 10px; text-align: left;">Session / Talk</th>
+          <th style="border: 1px solid #ddd; padding: 10px; text-align: left;">Speaker / Authors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 10px;">09:50 – 11:10</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">Technical Session 1 (Invited Talks)</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">
+            Keynote 1: Prof. Jinhong Yuan<br>
+            Keynote 2: Prof. Yong Zeng
+          </td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 10px;">11:10 – 11:30</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">Tea Break</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">—</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 10px;">11:30 – 12:50</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">Technical Session 2 (Oral Presentation)</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">
+            Several oral presentations
+          </td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 10px;">12:50 – 14:00</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">Lunch Break</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">—</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 10px;">14:00 – 15:20</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">Technical Session 3 (Invited Talks)</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">
+            Keynote: Prof. Zhiqiang Wei
+          </td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #ddd; padding: 10px;">14:40 – 16:00</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">Technical Session 4 (Oral Presentation)</td>
+          <td style="border: 1px solid #ddd; padding: 10px;">
+            Several oral presentations
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
 
 
 <style>
