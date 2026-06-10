@@ -345,17 +345,9 @@ header:
     font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
-  
-  .workshop-title {
-    color: #24292e;
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    line-height: 1.4;
-  }
 
   .session-block {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 10px;
     border-left: 4px solid #0366d6;
     padding-left: 16px;
@@ -371,7 +363,7 @@ header:
     display: inline-block;
   }
 
-  /* 核心优化：左右分栏的列表项 */
+  /* 左右分栏的列表项 */
   .agenda-item {
     display: flex;
     flex-direction: row;
@@ -380,13 +372,12 @@ header:
     border-bottom: 1px dashed #eaecef;
   }
   
-  /* 最后一个元素不要底边框 */
   .agenda-item:last-child {
     border-bottom: none;
     padding-bottom: 0;
   }
 
-  /* 左侧时间块固定宽度 */
+  /* 左侧时间块 */
   .item-time {
     min-width: 95px;
     flex-shrink: 0;
@@ -396,15 +387,16 @@ header:
     padding-top: 2px;
   }
 
-  /* 右侧内容块占据剩余空间 */
+  /* 右侧内容块 */
   .item-content {
     flex-grow: 1;
   }
 
+  /* 统一所有标题的字体和大小 */
   .item-title {
     font-weight: 600;
     color: #24292e;
-    font-size: 1rem;
+    font-size: 1rem;  /* 统一字体大小 */
     margin-bottom: 6px;
     line-height: 1.5;
   }
@@ -420,19 +412,15 @@ header:
     color: #444;
   }
 
-  /* 展开/折叠控件样式 */
+  /* 展开/折叠控件样式（重置默认样式，保证不被放大） */
   details summary {
     cursor: pointer;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #24292e;
     outline: none;
-    line-height: 1.5;
-    margin-bottom: 4px;
     transition: color 0.2s ease;
+    list-style-position: inside;
   }
 
-  details summary:hover {
+  details summary:hover .item-title {
     color: #0366d6;
   }
 
@@ -461,7 +449,7 @@ header:
     padding-left: 20px;
   }
   
-  /* 手机端适配：屏幕太窄时改为上下排列 */
+  /* 手机端适配 */
   @media (max-width: 600px) {
     .agenda-item {
       flex-direction: column;
@@ -475,12 +463,8 @@ header:
 </style>
 
 <div class="section-box">
-  <div class="workshop-title">
-    Workshop: Next-Generation Waveforms Design for Communications, Sensing, and Integrated Systems: Information-Theoretic & Application Perspectives
-  </div>
-  <div style="font-size: 0.95rem; color: #586069; margin-bottom: 20px;">
-    <strong>Chairs:</strong> Lei Liu, Yuhao Chi, and Yao Ge &nbsp;|&nbsp; <strong>Room:</strong> TBD
-  </div>
+  <!-- 这里替换成了你想要的小标题格式 -->
+  <h2 style="margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid #eaecef; padding-bottom: 10px;">Workshop Program</h2>
 
   <!-- ================= Session 1 ================= -->
   <div class="session-block">
@@ -500,8 +484,14 @@ header:
       <div class="item-time">10:30 - 11:10</div>
       <div class="item-content">
         <details>
-          <summary>Keynote: Rethinking Waveform for 6G Communications and Sensing: Delay-Doppler Alignment Modulation (DDAM)</summary>
-          <div class="item-authors" style="margin-bottom: 8px;"><span class="author-label">Speaker:</span> Prof. Yong Zeng</div>
+          <!-- 将 Title 和 Speaker 放在 summary 里，保证折叠时始终可见 -->
+          <summary>
+            <span class="item-title">Keynote: Rethinking Waveform for 6G Communications and Sensing: Delay-Doppler Alignment Modulation (DDAM)</span>
+            <div class="item-authors" style="margin-top: 4px; font-weight: normal;">
+              <span class="author-label">Speaker:</span> Prof. Yong Zeng
+              <span style="color: #0366d6; font-size: 0.8rem; margin-left: 8px;">(Click to view abstract)</span>
+            </div>
+          </summary>
           <div class="overview-text">
             <strong>Overview:</strong> Conventional multi-carrier waveforms based on time-frequency domain modulation face problems such as high peak-to-average power ratio (PAPR), serious out-of-band leakage, sensitivity to inter-carrier interference, and high cyclic prefix overhead. For future wireless systems, with the use of larger antenna arrays, higher frequency bands, and more powerful sensing capabilities, new opportunities arise for the design of wireless waveforms for 6G and beyond. To this end, this talk intends to explore the high spatial resolution of large antenna arrays and the multipath sparsity of high-frequency signals, and introduce the novel framework of Delay-Doppler alignment modulation (DDAM) based on joint processing in space-delay-Doppler domains. DDAM leverages path-based beamforming to distinguish multipath signals in the spatial domain, enabling per-path based delay and Doppler compensation and alignment. This will greatly reduce the delay Doppler spread of the channel and thus avoid the complicated channel equalization or large dimensional multi-carrier transmission. The talk will first introduce the background and motivation for proposing DDAM, and then introduce single-carrier and multi-carrier DDAM communications, followed by DDAM integrated sensing and communication (ISAC). Finally, preliminary experimental verification results are introduced.
           </div>
@@ -519,7 +509,6 @@ header:
   <div class="session-block">
     <div class="session-time">11:30 – 12:50 | Technical Session 2 (Oral Presentation)</div>
     
-    <!-- Paper 1 -->
     <div class="agenda-item">
       <div class="item-time">11:30 - 11:50</div>
       <div class="item-content">
@@ -528,7 +517,6 @@ header:
       </div>
     </div>
     
-    <!-- Paper 2 -->
     <div class="agenda-item">
       <div class="item-time">11:50 - 12:10</div>
       <div class="item-content">
@@ -537,7 +525,6 @@ header:
       </div>
     </div>
 
-    <!-- Paper 3 -->
     <div class="agenda-item">
       <div class="item-time">12:10 - 12:30</div>
       <div class="item-content">
@@ -546,7 +533,6 @@ header:
       </div>
     </div>
 
-    <!-- Paper 4 -->
     <div class="agenda-item">
       <div class="item-time">12:30 - 12:50</div>
       <div class="item-content">
@@ -569,8 +555,14 @@ header:
       <div class="item-time">14:00 - 14:40</div>
       <div class="item-content">
         <details>
-          <summary>Keynote: On Modulation Waveforms for 6G High-Mobility Communications: OFDM, OTFS, or DD-a-OFDM?</summary>
-          <div class="item-authors" style="margin-bottom: 8px;"><span class="author-label">Speaker:</span> Prof. Zhiqiang Wei</div>
+          <!-- 将 Title 和 Speaker 放在 summary 里 -->
+          <summary>
+            <span class="item-title">Keynote: On Modulation Waveforms for 6G High-Mobility Communications: OFDM, OTFS, or DD-a-OFDM?</span>
+            <div class="item-authors" style="margin-top: 4px; font-weight: normal;">
+              <span class="author-label">Speaker:</span> Prof. Zhiqiang Wei
+              <span style="color: #0366d6; font-size: 0.8rem; margin-left: 8px;">(Click to view abstract)</span>
+            </div>
+          </summary>
           <div class="overview-text">
             <strong>Overview:</strong> This course focuses on modulation waveform design for 6G high-mobility communications, and systematically introduces the fundamental concepts and signal processing methods of representative waveform schemes, including orthogonal frequency-division multiplexing (OFDM), orthogonal time frequency space (OTFS) modulation, and delay-Doppler domain-aided OFDM (DD-a-OFDM). The course begins by reviewing the basic concepts, core design criteria, and candidate waveform classifications for 6G high-mobility communications. It then proceeds from the challenges faced by OFDM in high-mobility scenarios to introduce the fundamental theory and signal processing methods of delay-Doppler (DD) domain communications, including DD-domain channel estimation and DD-domain multi-antenna transceiver signal processing. To further promote the compatibility and integration of DD-domain modulation waveforms with existing OFDM-based systems, the course presents DD-a-OFDM technology, analyzing how it introduces DD-domain signal processing to assist OFDM transmission while remaining compatible with the 5G NR OFDM framework, thereby striking a balance among Doppler resilience, system compatibility, and implementation complexity. This course is expected to provide waveform design references for the technological development of future applications such as low altitude communications, satellite communications, and integrated sensing and communications.
           </div>
@@ -583,7 +575,6 @@ header:
   <div class="session-block">
     <div class="session-time">14:40 – 16:00 | Technical Session 4 (Oral Presentation)</div>
     
-    <!-- Paper 1 -->
     <div class="agenda-item">
       <div class="item-time">14:40 - 15:00</div>
       <div class="item-content">
@@ -592,7 +583,6 @@ header:
       </div>
     </div>
     
-    <!-- Paper 2 -->
     <div class="agenda-item">
       <div class="item-time">15:00 - 15:20</div>
       <div class="item-content">
@@ -601,7 +591,6 @@ header:
       </div>
     </div>
 
-    <!-- Paper 3 -->
     <div class="agenda-item">
       <div class="item-time">15:20 - 15:40</div>
       <div class="item-content">
@@ -610,7 +599,6 @@ header:
       </div>
     </div>
 
-    <!-- Paper 4 -->
     <div class="agenda-item">
       <div class="item-time">15:40 - 16:00</div>
       <div class="item-content">
@@ -621,7 +609,6 @@ header:
   </div>
 
 </div>
-
 
 
 
