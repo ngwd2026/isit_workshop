@@ -335,69 +335,101 @@ header:
 
 
 <style>
-  /* 基础框样式，参考了你提供的 class */
+  /* 基础框样式 */
   .section-box {
-    border: 1px solid #ddd;
+    border: 1px solid #e1e4e8;
     border-radius: 8px;
-    padding: 20px;
+    padding: 24px;
     margin-bottom: 20px;
-    background-color: #fcfcfc;
-    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   
   .workshop-title {
-    color: #000;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+    color: #24292e;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.4;
   }
 
   .session-block {
-    margin-bottom: 20px;
-    border-left: 3px solid #0366d6;
-    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-left: 4px solid #0366d6;
+    padding-left: 16px;
   }
 
   .session-time {
-    font-weight: bold;
+    font-weight: 700;
     color: #0366d6;
-    font-size: 1.05rem;
-    margin-bottom: 8px;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #f1f8ff;
+    padding-bottom: 8px;
+    display: inline-block;
   }
 
-  .talk-item {
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #eaeaea;
-    border-radius: 6px;
+  /* 核心优化：左右分栏的列表项 */
+  .agenda-item {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px dashed #eaecef;
+  }
+  
+  /* 最后一个元素不要底边框 */
+  .agenda-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
-  .paper-item {
-    margin-bottom: 10px;
-    padding-left: 10px;
+  /* 左侧时间块固定宽度 */
+  .item-time {
+    min-width: 95px;
+    flex-shrink: 0;
+    font-weight: 600;
+    color: #586069;
     font-size: 0.95rem;
+    padding-top: 2px;
   }
 
-  .paper-title {
-    font-weight: bold;
-    color: #333;
+  /* 右侧内容块占据剩余空间 */
+  .item-content {
+    flex-grow: 1;
   }
 
-  .paper-authors {
-    color: #666;
-    font-size: 0.85rem;
-    margin-top: 3px;
+  .item-title {
+    font-weight: 600;
+    color: #24292e;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+
+  .item-authors {
+    color: #586069;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .author-label {
+    font-weight: 600;
+    color: #444;
   }
 
   /* 展开/折叠控件样式 */
   details summary {
     cursor: pointer;
-    font-weight: bold;
-    font-size: 0.95rem;
+    font-weight: 600;
+    font-size: 1rem;
     color: #24292e;
     outline: none;
-    margin-bottom: 5px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+    transition: color 0.2s ease;
   }
 
   details summary:hover {
@@ -405,10 +437,11 @@ header:
   }
 
   .overview-text {
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 12px;
+    padding: 16px;
     background-color: #f6f8fa;
-    border-radius: 4px;
+    border-left: 3px solid #d1d5da;
+    border-radius: 0 4px 4px 0;
     font-size: 0.9rem;
     line-height: 1.6;
     color: #444;
@@ -416,11 +449,28 @@ header:
   }
   
   .break-block {
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
     color: #d73a49;
-    padding: 10px 0;
-    border-bottom: 1px dashed #ddd;
-    margin-bottom: 15px;
+    padding: 16px 0;
+    margin: 20px 0;
+    background-color: #fffbdd;
+    border-radius: 6px;
+    padding-left: 20px;
+  }
+  
+  /* 手机端适配：屏幕太窄时改为上下排列 */
+  @media (max-width: 600px) {
+    .agenda-item {
+      flex-direction: column;
+      gap: 6px;
+    }
+    .item-time {
+      color: #0366d6;
+      font-size: 0.9rem;
+    }
   }
 </style>
 
@@ -428,112 +478,108 @@ header:
   <div class="workshop-title">
     Workshop: Next-Generation Waveforms Design for Communications, Sensing, and Integrated Systems: Information-Theoretic & Application Perspectives
   </div>
-  <div style="font-size: 0.95rem; color: #666; margin-bottom: 20px;">
-    <strong>Chairs:</strong> Lei Liu, Yuhao Chi, and Yao Ge | <strong>Room:</strong> TBD
+  <div style="font-size: 0.95rem; color: #586069; margin-bottom: 20px;">
+    <strong>Chairs:</strong> Lei Liu, Yuhao Chi, and Yao Ge &nbsp;|&nbsp; <strong>Room:</strong> TBD
   </div>
 
-  <!-- Session 1 -->
+  <!-- ================= Session 1 ================= -->
   <div class="session-block">
-    <div class="session-time">09:50 – 11:10: Technical Session 1 (Invited Talks)</div>
+    <div class="session-time">09:50 – 11:10 | Technical Session 1 (Invited Talks)</div>
     
-    <div class="talk-item">
-      <div style="font-size: 0.95rem; color: #666;">09:50 - 10:30</div>
-      <strong>Keynote 1:</strong> (Title TBD) <br>
-      <span style="color: #666; font-size: 0.9rem;">Speaker: Prof. Jinhong Yuan</span>
+    <!-- Item 1 -->
+    <div class="agenda-item">
+      <div class="item-time">09:50 - 10:30</div>
+      <div class="item-content">
+        <div class="item-title">Keynote 1: (Title to be updated)</div>
+        <div class="item-authors"><span class="author-label">Speaker:</span> Prof. Jinhong Yuan</div>
+      </div>
     </div>
 
-    <div class="talk-item">
-      <div style="font-size: 0.95rem; color: #666;">10:30 - 11:10</div>
-      <details>
-        <summary>Keynote: Rethinking Waveform for 6G Communications and Sensing: Delay-Doppler Alignment Modulation (DDAM)</summary>
-        <div style="color: #666; font-size: 0.9rem; margin-bottom: 5px;">Speaker: Prof. Yong Zeng</div>
-        <div class="overview-text">
-          <strong>Overview:</strong> Conventional multi-carrier waveforms based on time-frequency domain modulation face problems such as high peak-to-average power ratio (PAPR), serious out-of-band leakage, sensitivity to inter-carrier interference, and high cyclic prefix overhead. For future wireless systems, with the use of larger antenna arrays, higher frequency bands, and more powerful sensing capabilities, new opportunities arise for the design of wireless waveforms for 6G and beyond. To this end, this talk intends to explore the high spatial resolution of large antenna arrays and the multipath sparsity of high-frequency signals, and introduce the novel framework of Delay-Doppler alignment modulation (DDAM) based on joint processing in space-delay-Doppler domains. DDAM leverages path-based beamforming to distinguish multipath signals in the spatial domain, enabling per-path based delay and Doppler compensation and alignment. This will greatly reduce the delay Doppler spread of the channel and thus avoid the complicated channel equalization or large dimensional multi-carrier transmission. The talk will first introduce the background and motivation for proposing DDAM, and then introduce single-carrier and multi-carrier DDAM communications, followed by DDAM integrated sensing and communication (ISAC). Finally, preliminary experimental verification results are introduced.
-        </div>
-      </details>
+    <!-- Item 2 -->
+    <div class="agenda-item">
+      <div class="item-time">10:30 - 11:10</div>
+      <div class="item-content">
+        <details>
+          <summary>Keynote: Rethinking Waveform for 6G Communications and Sensing: Delay-Doppler Alignment Modulation (DDAM)</summary>
+          <div class="item-authors" style="margin-bottom: 8px;"><span class="author-label">Speaker:</span> Prof. Yong Zeng</div>
+          <div class="overview-text">
+            <strong>Overview:</strong> Conventional multi-carrier waveforms based on time-frequency domain modulation face problems such as high peak-to-average power ratio (PAPR), serious out-of-band leakage, sensitivity to inter-carrier interference, and high cyclic prefix overhead. For future wireless systems, with the use of larger antenna arrays, higher frequency bands, and more powerful sensing capabilities, new opportunities arise for the design of wireless waveforms for 6G and beyond. To this end, this talk intends to explore the high spatial resolution of large antenna arrays and the multipath sparsity of high-frequency signals, and introduce the novel framework of Delay-Doppler alignment modulation (DDAM) based on joint processing in space-delay-Doppler domains. DDAM leverages path-based beamforming to distinguish multipath signals in the spatial domain, enabling per-path based delay and Doppler compensation and alignment. This will greatly reduce the delay Doppler spread of the channel and thus avoid the complicated channel equalization or large dimensional multi-carrier transmission. The talk will first introduce the background and motivation for proposing DDAM, and then introduce single-carrier and multi-carrier DDAM communications, followed by DDAM integrated sensing and communication (ISAC). Finally, preliminary experimental verification results are introduced.
+          </div>
+        </details>
+      </div>
     </div>
   </div>
 
-  <!-- Tea Break -->
+  <!-- ================= Tea Break ================= -->
   <div class="break-block">
-    ☕ 11:10 – 11:30: Tea Break
+    <span>☕</span> 11:10 – 11:30 | Tea Break
   </div>
 
-  <!-- Session 2 -->
+  <!-- ================= Session 2 ================= -->
   <div class="session-block">
-    <div class="session-time">11:30 – 12:50: Technical Session 2 (Oral Presentation)</div>
+    <div class="session-time">11:30 – 12:50 | Technical Session 2 (Oral Presentation)</div>
     
-    <div class="paper-item">
-      <div class="paper-title">11:30-11:50 | Low-PAPR OFDM-Based DFRC Waveform Design with Constant-Modulus Modulation</div>
-      <div class="paper-authors">Authors: Shide Wang (Yan Shan University, China); Xiuping Peng and Tao Zheng (Yanshan University, China)</div>
+    <!-- Paper 1 -->
+    <div class="agenda-item">
+      <div class="item-time">11:30 - 11:50</div>
+      <div class="item-content">
+        <div class="item-title">Low-PAPR OFDM-Based DFRC Waveform Design with Constant-Modulus Modulation</div>
+        <div class="item-authors"><span class="author-label">Authors:</span> Shide Wang (Yan Shan University, China); Xiuping Peng and Tao Zheng (Yanshan University, China)</div>
+      </div>
     </div>
     
-    <div class="paper-item">
-      <div class="paper-title">11:50-12:10 | Improved MRC Algorithm with Weighted Update Mechanism for Coded OTFS System</div>
-      <div class="paper-authors">Authors: Hui Chen, Jinhua Sun and Ke Dang (Xidian University, China)</div>
+    <!-- Paper 2 -->
+    <div class="agenda-item">
+      <div class="item-time">11:50 - 12:10</div>
+      <div class="item-content">
+        <div class="item-title">Improved MRC Algorithm with Weighted Update Mechanism for Coded OTFS System</div>
+        <div class="item-authors"><span class="author-label">Authors:</span> Hui Chen, Jinhua Sun and Ke Dang (Xidian University, China)</div>
+      </div>
     </div>
 
-    <div class="paper-item">
-      <div class="paper-title">12:10-12:30 | A Universal Random Precoding Framework for MIMO Systems</div>
-      <div class="paper-authors">Authors: Jiazhen Dong and Lei Liu (Zhejiang University, China); Xiaojun Yuan (University of Electronic Science and Technology of China, China); Baoming Bai (Xidian University, China)</div>
+    <!-- Paper 3 -->
+    <div class="agenda-item">
+      <div class="item-time">12:10 - 12:30</div>
+      <div class="item-content">
+        <div class="item-title">A Universal Random Precoding Framework for MIMO Systems</div>
+        <div class="item-authors"><span class="author-label">Authors:</span> Jiazhen Dong and Lei Liu (Zhejiang University, China); Xiaojun Yuan (University of Electronic Science and Technology of China, China); Baoming Bai (Xidian University, China)</div>
+      </div>
     </div>
 
-    <div class="paper-item">
-      <div class="paper-title">12:30-12:50 | Non-Coherent Transmission Meets OFDM in Presence of CFO: TDS or FDS?</div>
-      <div class="paper-authors">Authors: Yiding Wang, Sirui Miao and Neng Ye (Beijing Institute of Technology, China)</div>
+    <!-- Paper 4 -->
+    <div class="agenda-item">
+      <div class="item-time">12:30 - 12:50</div>
+      <div class="item-content">
+        <div class="item-title">Non-Coherent Transmission Meets OFDM in Presence of CFO: TDS or FDS?</div>
+        <div class="item-authors"><span class="author-label">Authors:</span> Yiding Wang, Sirui Miao and Neng Ye (Beijing Institute of Technology, China)</div>
+      </div>
     </div>
   </div>
 
-  <!-- Lunch Break -->
-  <div class="break-block" style="color: #28a745;">
-    🍽️ 12:50 – 14:00: Lunch Break
+  <!-- ================= Lunch Break ================= -->
+  <div class="break-block" style="color: #28a745; background-color: #f0fdf4;">
+    <span>🍽️</span> 12:50 – 14:00 | Lunch Break
   </div>
 
-  <!-- Session 3 -->
-  <!-- 注意：这里我暂时把Session 3 的总时间按讲者时间改成了 14:00 - 14:40，避免与Session 4冲突。你可以自行修改 -->
+  <!-- ================= Session 3 ================= -->
   <div class="session-block">
-    <div class="session-time">14:00 – 14:40: Technical Session 3 (Invited Talks)</div>
+    <div class="session-time">14:00 – 14:40 | Technical Session 3 (Invited Talks)</div>
     
-    <div class="talk-item">
-      <div style="font-size: 0.95rem; color: #666;">14:00 - 14:40</div>
-      <details>
-        <summary>Keynote: On Modulation Waveforms for 6G High-Mobility Communications: OFDM, OTFS, or DD-a-OFDM?</summary>
-        <div style="color: #666; font-size: 0.9rem; margin-bottom: 5px;">Speaker: Prof. Zhiqiang Wei</div>
-        <div class="overview-text">
-          <strong>Overview:</strong> This course focuses on modulation waveform design for 6G high-mobility communications, and systematically introduces the fundamental concepts and signal processing methods of representative waveform schemes, including orthogonal frequency-division multiplexing (OFDM), orthogonal time frequency space (OTFS) modulation, and delay-Doppler domain-aided OFDM (DD-a-OFDM). The course begins by reviewing the basic concepts, core design criteria, and candidate waveform classifications for 6G high-mobility communications. It then proceeds from the challenges faced by OFDM in high-mobility scenarios to introduce the fundamental theory and signal processing methods of delay-Doppler (DD) domain communications, including DD-domain channel estimation and DD-domain multi-antenna transceiver signal processing. To further promote the compatibility and integration of DD-domain modulation waveforms with existing OFDM-based systems, the course presents DD-a-OFDM technology, analyzing how it introduces DD-domain signal processing to assist OFDM transmission while remaining compatible with the 5G NR OFDM framework, thereby striking a balance among Doppler resilience, system compatibility, and implementation complexity. This course is expected to provide waveform design references for the technological development of future applications such as low altitude communications, satellite communications, and integrated sensing and communications.
-        </div>
-      </details>
+    <div class="agenda-item">
+      <div class="item-time">14:00 - 14:40</div>
+      <div class="item-content">
+        <details>
+          <summary>Keynote: On Modulation Waveforms for 6G High-Mobility Communications: OFDM, OTFS, or DD-a-OFDM?</summary>
+          <div class="item-authors" style="margin-bottom: 8px;"><span class="author-label">Speaker:</span> Prof. Zhiqiang Wei</div>
+          <div class="overview-text">
+            <strong>Overview:</strong> This course focuses on modulation waveform design for 6G high-mobility communications, and systematically introduces the fundamental concepts and signal processing methods of representative waveform schemes, including orthogonal frequency-division multiplexing (OFDM), orthogonal time frequency space (OTFS) modulation, and delay-Doppler domain-aided OFDM (DD-a-OFDM). The course begins by reviewing the basic concepts, core design criteria, and candidate waveform classifications for 6G high-mobility communications. It then proceeds from the challenges faced by OFDM in high-mobility scenarios to introduce the fundamental theory and signal processing methods of delay-Doppler (DD) domain communications, including DD-domain channel estimation and DD-domain multi-antenna transceiver signal processing. To further promote the compatibility and integration of DD-domain modulation waveforms with existing OFDM-based systems, the course presents DD-a-OFDM technology, analyzing how it introduces DD-domain signal processing to assist OFDM transmission while remaining compatible with the 5G NR OFDM framework, thereby striking a balance among Doppler resilience, system compatibility, and implementation complexity. This course is expected to provide waveform design references for the technological development of future applications such as low altitude communications, satellite communications, and integrated sensing and communications.
+          </div>
+        </details>
+      </div>
     </div>
   </div>
 
-  <!-- Session 4 -->
-  <div class="session-block">
-    <div class="session-time">14:40 – 16:00: Technical Session 4 (Oral Presentation)</div>
-    
-    <div class="paper-item">
-      <div class="paper-title">14:40-15:00 | Joint Iterative Detection and Decoding for LDPC-Coded Faster-than-Nyquist Systems</div>
-      <div class="paper-authors">Authors: Hong Wang, Tongzhou Yu, Jian Fang and Baoming Bai (Xidian University, China); Dan Feng (Xi'an University of Posts and Telecommunications, China)</div>
-    </div>
-    
-    <div class="paper-item">
-      <div class="paper-title">15:00-15:20 | Storage-Efficient and High-Reliability Interleaved Transform for Enhanced Random Multiplexing</div>
-      <div class="paper-authors">Authors: Ming Wang (Communication University of China, China); Lei Liu (Zhejiang University, China); Shufeng Li (Communication University of China, China); Yuhao Chi (Xidian University, China)</div>
-    </div>
-
-    <div class="paper-item">
-      <div class="paper-title">15:20-15:40 | Neural Network-Based Hybrid Digital-Analog Beamformer Design for Wideband Massive MIMO Systems with Large-Scale Users</div>
-      <div class="paper-authors">Authors: Haojie Cheng (Southeast University, China); Beiyuan Liu (Northwestern Polytechnical University, China); Liquan Chen (Southeast University, China); Julian Cheng (University of British Columbia, Canada & Great Bay University, China)</div>
-    </div>
-
-    <div class="paper-item">
-      <div class="paper-title">15:40-16:00 | Unified Analytical Model for Atomic Receivers Under Typical Quantum Interference Paths</div>
-      <!-- 我在这里帮你把缺失的右括号补上了 -->
-      <div class="paper-authors">Authors: Yiyue Xiang and Neng Ye (Beijing Institute of Technology), Qihao Peng and Pei Xiao (University of Surrey, United Kingdom), Jianping An (Beijing Institute of Technology, China)</div>
-    </div>
-  </div>
-
-</div>
-
+  <!-- ================= Session 4 ================= -->
 
 
 
