@@ -407,7 +407,7 @@ header:
   .item-title {
     font-weight: 600;
     color: #24292e;
-    font-size: 1rem;
+    font-size: 0.88rem;
     margin-bottom: 6px;
     line-height: 1.5;
   }
