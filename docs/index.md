@@ -580,29 +580,43 @@ header:
   </div>
 
   <!-- ================= Session 4 ================= -->
- <!-- Session 4 -->
   <div class="session-block">
-    <div class="session-time">14:40 – 16:00: Technical Session 4 (Oral Presentation)</div>
+    <div class="session-time">14:40 – 16:00 | Technical Session 4 (Oral Presentation)</div>
     
-    <div class="paper-item">
-      <div class="paper-title">14:40-15:00 | Joint Iterative Detection and Decoding for LDPC-Coded Faster-than-Nyquist Systems</div>
-      <div class="paper-authors">Authors: Hong Wang, Tongzhou Yu, Jian Fang and Baoming Bai (Xidian University, China); Dan Feng (Xi'an University of Posts and Telecommunications, China)</div>
+    <!-- Paper 1 -->
+    <div class="agenda-item">
+      <div class="item-time">14:40 - 15:00</div>
+      <div class="item-content">
+        <div class="item-title">Joint Iterative Detection and Decoding for LDPC-Coded Faster-than-Nyquist Systems</div>
+        <div class="item-authors"><span class="author-label">Authors:</span> Hong Wang, Tongzhou Yu, Jian Fang and Baoming Bai (Xidian University, China); Dan Feng (Xi'an University of Posts and Telecommunications, China)</div>
+      </div>
     </div>
     
-    <div class="paper-item">
-      <div class="paper-title">15:00-15:20 | Storage-Efficient and High-Reliability Interleaved Transform for Enhanced Random Multiplexing</div>
-      <div class="paper-authors">Authors: Ming Wang (Communication University of China, China); Lei Liu (Zhejiang University, China); Shufeng Li (Communication University of China, China); Yuhao Chi (Xidian University, China)</div>
+    <!-- Paper 2 -->
+    <div class="agenda-item">
+      <div class="item-time">15:00 - 15:20</div>
+      <div class="item-content">
+        <div class="item-title">Storage-Efficient and High-Reliability Interleaved Transform for Enhanced Random Multiplexing</div>
+        <div class="item-authors"><span class="author-label">Authors:</span> Ming Wang (Communication University of China, China); Lei Liu (Zhejiang University, China); Shufeng Li (Communication University of China, China); Yuhao Chi (Xidian University, China)</div>
+      </div>
     </div>
 
-    <div class="paper-item">
-      <div class="paper-title">15:20-15:40 | Neural Network-Based Hybrid Digital-Analog Beamformer Design for Wideband Massive MIMO Systems with Large-Scale Users</div>
-      <div class="paper-authors">Authors: Haojie Cheng (Southeast University, China); Beiyuan Liu (Northwestern Polytechnical University, China); Liquan Chen (Southeast University, China); Julian Cheng (University of British Columbia, Canada & Great Bay University, China)</div>
+    <!-- Paper 3 -->
+    <div class="agenda-item">
+      <div class="item-time">15:20 - 15:40</div>
+      <div class="item-content">
+        <div class="item-title">Neural Network-Based Hybrid Digital-Analog Beamformer Design for Wideband Massive MIMO Systems with Large-Scale Users</div>
+        <div class="item-authors"><span class="author-label">Authors:</span> Haojie Cheng (Southeast University, China); Beiyuan Liu (Northwestern Polytechnical University, China); Liquan Chen (Southeast University, China); Julian Cheng (University of British Columbia, Canada & Great Bay University, China)</div>
+      </div>
     </div>
 
-    <div class="paper-item">
-      <div class="paper-title">15:40-16:00 | Unified Analytical Model for Atomic Receivers Under Typical Quantum Interference Paths</div>
-      <!-- 我在这里帮你把缺失的右括号补上了 -->
-      <div class="paper-authors">Authors: Yiyue Xiang and Neng Ye (Beijing Institute of Technology), Qihao Peng and Pei Xiao (University of Surrey, United Kingdom), Jianping An (Beijing Institute of Technology, China)</div>
+    <!-- Paper 4 -->
+    <div class="agenda-item">
+      <div class="item-time">15:40 - 16:00</div>
+      <div class="item-content">
+        <div class="item-title">Unified Analytical Model for Atomic Receivers Under Typical Quantum Interference Paths</div>
+        <div class="item-authors"><span class="author-label">Authors:</span> Yiyue Xiang and Neng Ye (Beijing Institute of Technology), Qihao Peng and Pei Xiao (University of Surrey, United Kingdom), Jianping An (Beijing Institute of Technology, China)</div>
+      </div>
     </div>
   </div>
 
