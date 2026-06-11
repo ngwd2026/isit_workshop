@@ -303,7 +303,6 @@ header:
 
 
 
-
 <div class="section-box" style="font-family: 'Open Sans', sans-serif;">
   <h2 style="margin-bottom: 30px;">Invited Speakers</h2>
 
@@ -311,8 +310,7 @@ header:
   <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
     <!-- 照片 -->
     <div style="flex-shrink: 0; width: 150px;">
-      <!-- 注意这里的路径改为了 image/yuan.png -->
-      <img src="image/yuan.png" alt="Prof. Jinhong Yuan" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
+      <img src="{{ '/assets/images/yuan.png' | relative_url }}" alt="Prof. Jinhong Yuan" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
     </div>
     
     <!-- 信息 -->
@@ -324,7 +322,7 @@ header:
         University of New South Wales, Australia
       </div>
       <div style="font-size: 0.95rem; color: #333; line-height: 1.6;">
-        Professor Jinhong Yuan is a Professor of Telecommunications with the School of Electrical Engineering and Telecommunications. He received the B.E. and Ph.D degrees in Electronics Engineering in 1991 and 1997, respectively. From 1997 to 1999 he was a Research Fellow at the School of Electrical Engineering, the University of Sydney, Sydney, Australia. In 2000 he joined the School of Electrical Engineering and Telecommunications, the University of New South Wales, Sydney, Australia, where he is currently a Professor and Head of Telecommunications of the school. He has published two books, two book chapters, over 300 papers in telecommunications journals and conference proceedings and 40 industrial reports. He is a co-inventor of one patent on MIMO systems and two patents on low-density-parity-check (LDPC) codes. He co-authored four Best Paper Awards and one Best Poster Award, including a Best Paper Award of IEEE Wireless Communications and Networking Conference (WCNC), Cancun, Mexico in 2011, and a Best Paper Award of IEEE International Symposium on Wireless Communications Systems (ISWCS), Trondheim, Norway in 2007. His publication is available from http://www2.ee.unsw.edu.au/wcl/JYuan.html. He serves as the IEEE NSW Chair of joint Communications/Signal Processions/Ocean Engineering Chapter and an Associate Editor for IEEE Transactions on Communications and an Associate Editor for IEEE Transactions on Wireless Communications.
+        Professor Jinhong Yuan is a Professor of Telecommunications with the School of Electrical Engineering and Telecommunications. He received the B.E. and Ph.D degrees in Electronics Engineering in 1991 and 1997, respectively. From 1997 to 1999 he was a Research Fellow at the School of Electrical Engineering, the University of Sydney, Sydney, Australia. In 2000 he joined the School of Electrical Engineering and Telecommunications, the University of New South Wales, Sydney, Australia, where he is currently a Professor and Head of Telecommunications of the school. He has published two books, two book chapters, over 300 papers in telecommunications journals and conference proceedings and 40 industrial reports. He is a co-inventor of one patent on MIMO systems and two patents on low-density-parity-check (LDPC) codes. He co-authored four Best Paper Awards and one Best Poster Award, including a Best Paper Award of IEEE Wireless Communications and Networking Conference (WCNC), Cancun, Mexico in 2011, and a Best Paper Award of IEEE International Symposium on Wireless Communications Systems (ISWCS), Trondheim, Norway in 2007. He serves as the IEEE NSW Chair of joint Communications/Signal Processions/Ocean Engineering Chapter and an Associate Editor for IEEE Transactions on Communications and an Associate Editor for IEEE Transactions on Wireless Communications.
       </div>
     </div>
   </div>
@@ -333,8 +331,7 @@ header:
   <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
     <!-- 照片 -->
     <div style="flex-shrink: 0; width: 150px;">
-      <!-- 注意这里的路径改为了 image/zeng.png -->
-      <img src="image/zeng.png" alt="Prof. Yong Zeng" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
+      <img src="{{ '/assets/images/zeng.png' | relative_url }}" alt="Prof. Yong Zeng" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
     </div>
     
     <!-- 信息 -->
@@ -356,8 +353,7 @@ header:
   <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
     <!-- 照片 -->
     <div style="flex-shrink: 0; width: 150px;">
-      <!-- 注意这里的路径改为了 image/wei.png -->
-      <img src="image/wei.png" alt="Prof. Zhiqiang Wei" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
+      <img src="{{ '/assets/images/wei.png' | relative_url }}" alt="Prof. Zhiqiang Wei" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
     </div>
     
     <!-- 信息 -->
@@ -375,6 +371,7 @@ header:
   </div>
 
 </div>
+
 
 
 
