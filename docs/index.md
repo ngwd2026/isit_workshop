@@ -302,45 +302,77 @@ header:
 
 
 
-<div class="section-box">
-  <h2>Invited Speaker</h2>
 
-  <div style="padding: 10px 0 20px 0; text-align: left;">
-    <div style="margin-bottom: 5px;">
-      <a href="https://www.unsw.edu.au/staff/jinhong-yuan" target="_blank" 
-         style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
+
+<div class="section-box" style="font-family: 'Open Sans', sans-serif;">
+  <h2 style="margin-bottom: 30px;">Invited Speakers</h2>
+
+  <!-- Speaker 1: Prof. Jinhong Yuan -->
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+    <!-- 照片 -->
+    <div style="flex-shrink: 0; width: 150px;">
+      <img src="yuan.png" alt="Prof. Jinhong Yuan" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
+    </div>
+    
+    <!-- 信息 -->
+    <div style="flex: 1; min-width: 280px; text-align: justify;">
+      <div style="color: #000; font-weight: bold; font-size: 1.2rem; margin-bottom: 5px;">
         Prof. Jinhong Yuan
-      </a>
-    </div>
-    <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif;">
-      University of New South Wales, Australia
+      </div>
+      <div style="font-size: 0.95rem; color: #666; font-style: italic; margin-bottom: 15px;">
+        University of New South Wales, Australia
+      </div>
+      <div style="font-size: 0.95rem; color: #333; line-height: 1.6;">
+        Professor Jinhong Yuan is a Professor of Telecommunications with the School of Electrical Engineering and Telecommunications. He received the B.E. and Ph.D degrees in Electronics Engineering in 1991 and 1997, respectively. From 1997 to 1999 he was a Research Fellow at the School of Electrical Engineering, the University of Sydney, Sydney, Australia. In 2000 he joined the School of Electrical Engineering and Telecommunications, the University of New South Wales, Sydney, Australia, where he is currently a Professor and Head of Telecommunications of the school. He has published two books, two book chapters, over 300 papers in telecommunications journals and conference proceedings and 40 industrial reports. He is a co-inventor of one patent on MIMO systems and two patents on low-density-parity-check (LDPC) codes. He co-authored four Best Paper Awards and one Best Poster Award, including a Best Paper Award of IEEE Wireless Communications and Networking Conference (WCNC), Cancun, Mexico in 2011, and a Best Paper Award of IEEE International Symposium on Wireless Communications Systems (ISWCS), Trondheim, Norway in 2007. His publication is available from http://www2.ee.unsw.edu.au/wcl/JYuan.html. He serves as the IEEE NSW Chair of joint Communications/Signal Processions/Ocean Engineering Chapter and an Associate Editor for IEEE Transactions on Communications and an Associate Editor for IEEE Transactions on Wireless Communications.
+      </div>
     </div>
   </div>
 
-  <div style="padding: 10px 0 20px 0; text-align: left;">
-    <div style="margin-bottom: 5px;">
-      <a href="https://oic.seu.edu.cn/oicenglish/2026/0522/c68505a568543/page.htm#:~:text=Prof.%20Zeng%20is%20internationally%20recognized%20for%20his%20pioneering,in%20the%20integration%20of%20aerial%20and%20ground%20networks" target="_blank" 
-         style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
+  <!-- Speaker 2: Prof. Yong Zeng -->
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+    <!-- 照片 -->
+    <div style="flex-shrink: 0; width: 150px;">
+      <img src="zeng.png" alt="Prof. Yong Zeng" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
+    </div>
+    
+    <!-- 信息 -->
+    <div style="flex: 1; min-width: 280px; text-align: justify;">
+      <div style="color: #000; font-weight: bold; font-size: 1.2rem; margin-bottom: 5px;">
         Prof. Yong Zeng
-      </a>
-    </div>
-    <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif; line-height: 1.6;">
-      Southeast University and Purple Mountain Laboratory, Nanjing, China
+      </div>
+      <div style="font-size: 0.95rem; color: #666; font-style: italic; margin-bottom: 15px;">
+        Southeast University and Purple Mountain Laboratory, Nanjing, China
+      </div>
+      <div style="font-size: 0.95rem; color: #333; line-height: 1.6;">
+        <p style="margin-top: 0;">Yong Zeng, IEEE Fellow, Young Chief Professor of Southeast University and Purple Mountain Laboratory, Nanjing, China. He received the Bachelor of Engineering (First-Class Honours) and Ph.D. degrees from Nanyang Technological University (NTU), Singapore. From 2013 to 2018, he was a Research Fellow and Senior Research Fellow at the National University of Singapore (NUS). From 2018 to 2019, he was a Lecturer at the University of Sydney, Australia.</p>
+        <p style="margin-bottom: 0;">Prof. Zeng was listed as Clarivate Analytics Highly Cited Researcher for 7 consecutive years (2019-2025), AI2000 Most Influential Scholars in the field of Internet of Things for 4 consecutive years (2021-2024), Stanford "Top 2% of Scientists in the World - Lifetime Influence". Prof. Zeng is the recipient of Australia Research Council (ARC) Discovery Early Career Researcher Award (DECRA), IEEE Communications Society Asia-Pacific Outstanding Young Researcher Award, and won 10 international and domestic best paper awards including IEEE Marconi Award (2020 and 2024), Heinrich Hertz Award (2017 and 2020), etc. Prof. Zeng proposed the concept of channel knowledge map (CKM) and Delay-Doppler Alignment Modulation (DDAM) transmission method. His works have been cited by more than 38,000 times. He serves/served on the editorial board of SCI journals such as IEEE Transactions on Communications, IEEE Transactions on Mobile Computing, and IEEE Communications Letters, and leading guest editor of journals including IEEE ComMag, Wireless ComMag, China Communications, and Science China Information Sciences. Prof. Zeng was elevated to IEEE Fellow “for contributions to unmanned aerial vehicle communications and wireless power transfer”.</p>
+      </div>
     </div>
   </div>
 
-  <div style="padding: 10px 0 20px 0; text-align: left;">
-    <div style="margin-bottom: 5px;">
-      <a href="https://gr.xjtu.edu.cn/zqwei/" target="_blank" 
-         style="text-decoration: none; color: #000 !important; font-weight: bold; font-size: 0.95rem; font-family: 'Open Sans', sans-serif;">
-        Prof. Zhiqiang Wei
-      </a>
+  <!-- Speaker 3: Prof. Zhiqiang Wei -->
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
+    <!-- 照片 -->
+    <div style="flex-shrink: 0; width: 150px;">
+      <img src="wei.png" alt="Prof. Zhiqiang Wei" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
     </div>
-    <div style="font-size: 0.95rem; color: #666; font-family: 'Open Sans', sans-serif; line-height: 1.6;">
-      Xi'an Jiaotong University, Xi'an, China
+    
+    <!-- 信息 -->
+    <div style="flex: 1; min-width: 280px; text-align: justify;">
+      <div style="color: #000; font-weight: bold; font-size: 1.2rem; margin-bottom: 5px;">
+        Prof. Zhiqiang Wei
+      </div>
+      <div style="font-size: 0.95rem; color: #666; font-style: italic; margin-bottom: 15px;">
+        Xi'an Jiaotong University, Xi'an, China
+      </div>
+      <div style="font-size: 0.95rem; color: #333; line-height: 1.6;">
+        Zhiqiang Wei received the B.E. degree in information engineering from Northwestern Polytechnical University (NPU), Xi'an, China, in 2012, and the Ph.D. degree in electrical engineering and telecommunications from the University of New South Wales (UNSW), Sydney, Australia, in 2019. From 2019 to 2020, he was a Postdoctoral Research Fellow with UNSW. From 2021 to 2022, he was a Humboldt Postdoctoral Research Fellow with the Institute for Digital Communications, Friedrich-Alexander University Erlangen-Nuremberg (FAU), Erlangen, Germany. He is currently a Professor with the School of Mathematics and Statistics, Xi'an Jiaotong University, Xi'an, China. His research interests include delay-Doppler communications, resource allocation optimization, and statistical and array signal processing. He received the Best Paper Award at the IEEE ICC 2018 and IEEE WCNC 2023. He was the organizer/chair for several workshops and tutorials on related topics of orthogonal time frequency space (OTFS) in IEEE flagship conferences, including IEEE ICC, IEEE WCNC, IEEE VTC, and IEEE ICCC. He has been listed in the World’s Top 2% Scientists by Stanford University and Highly Cited Chinese Researcher since 2021. He is currently an editor for the IEEE Transactions on Communications, IEEE Transactions on Wireless Communications, IEEE Open Journal of the Communications Society, and Electronics.
+      </div>
     </div>
   </div>
+
 </div>
+
 
 
 
