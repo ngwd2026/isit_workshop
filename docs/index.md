@@ -322,7 +322,8 @@ header:
         University of New South Wales, Australia
       </div>
       <div style="font-size: 0.95rem; color: #333; line-height: 1.6;">
-        Professor Jinhong Yuan is a Professor of Telecommunications with the School of Electrical Engineering and Telecommunications. He received the B.E. and Ph.D degrees in Electronics Engineering in 1991 and 1997, respectively. From 1997 to 1999 he was a Research Fellow at the School of Electrical Engineering, the University of Sydney, Sydney, Australia. In 2000 he joined the School of Electrical Engineering and Telecommunications, the University of New South Wales, Sydney, Australia, where he is currently a Professor and Head of Telecommunications of the school. He has published two books, two book chapters, over 300 papers in telecommunications journals and conference proceedings and 40 industrial reports. He is a co-inventor of one patent on MIMO systems and two patents on low-density-parity-check (LDPC) codes. He co-authored four Best Paper Awards and one Best Poster Award, including a Best Paper Award of IEEE Wireless Communications and Networking Conference (WCNC), Cancun, Mexico in 2011, and a Best Paper Award of IEEE International Symposium on Wireless Communications Systems (ISWCS), Trondheim, Norway in 2007. He serves as the IEEE NSW Chair of joint Communications/Signal Processions/Ocean Engineering Chapter and an Associate Editor for IEEE Transactions on Communications and an Associate Editor for IEEE Transactions on Wireless Communications.
+        Jinhong Yuan (M'02--SM'11--F'16) received the B.E. and Ph.D. degrees in electronics engineering in 1991 and 1997, respectively. From 1997 to 1999, he was a Research Fellow with the School of Electrical Engineering, University of Sydney, Sydney, Australia. In 2000, he joined the School of Electrical Engineering and Telecommunications, University of New South Wales, Sydney, Australia, where he is currently Head of School. He has published two books, five book chapters, over 300 papers in telecommunications journals and conference proceedings, and 50 industrial reports. He is a co-inventor of one patent on MIMO systems and four patents on low-density-parity-check codes. He has co-authored five Best Paper Awards and one Best Poster Award, including 2025 IEEE Asia-Pacific Best Paper Award, the Best Paper Award from the IEEE International Conference on Communications, Kansas City, USA, in 2018, the Best Paper Award from IEEE Wireless Communications and Networking Conference, Cancun, Mexico, in 2011, and the Best Paper Award from the IEEE International Symposium on Wireless Communications Systems, Trondheim, Norway, in 2007. He is an IEEE Fellow and listed as a 2025 Highly-Cited Researcher. He served as the IEEE NSW Chapter Chair of Joint Communications/Signal Processions/Ocean Engineering Chapter during 2011-2014 and served as an Associate Editor for the IEEE Transactions on Communications during 2012-2017 and 2020-2025 and IEEE Transactions on Wireless Communications during 2019-2024. His current research interests include error control coding and information theory, communication theory, wireless communications, and delay-Doppler domain signal processing and communications.
+好的
       </div>
     </div>
   </div>
@@ -524,15 +525,24 @@ header:
   <h2 style="margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid #eaecef; padding-bottom: 10px;">Workshop Program</h2>
 
   <!-- ================= Session 1 ================= -->
-  <div class="session-block">
+<div class="session-block">
     <div class="session-time">09:50 – 11:10 | Technical Session 1 (Invited Talks)</div>
     
     <!-- Item 1 -->
     <div class="agenda-item">
       <div class="item-time">09:50 - 10:30</div>
       <div class="item-content">
-        <div class="item-title">Keynote 1: (Title to be updated)</div>
-        <div class="item-authors"><span class="author-label">Speaker:</span> Prof. Jinhong Yuan</div>
+        <details>
+          <summary>
+            <span class="item-title">Keynote 1: Enabling One-Tap Equalization over Doubly Selective Channels with AFDM</span>
+            <div class="item-authors" style="margin-top: 4px;">
+              <span class="author-label">Speaker:</span> Prof. Jinhong Yuan
+            </div>
+          </summary>
+          <div class="overview-text">
+            <strong>Overview:</strong> Chirp-based modulation, such as affine frequency division multiplexing (AFDM), and delay-Doppler domain modulations (OTFS/ODDM) have recently emerged as promising contenders for achieving reliable communications in high-mobility scenarios characterized by doubly selective channels. Despite their promise, a key drawback they face is inter-symbol interference (ISI) in the domain of modulation, necessitating high complexity multi-tap equalization. To address this challenge, this talk proposes a novel AFDM-based transmission scheme that can enable a one-tap equalizer over doubly selective channels. The proposal first involves the suitable selection of AFDM parameters, introducing zero-padding in the affine domain at the transmitter, and cyclically superimposed signal reconstruction at the receiver. These operations simplify the effective affine domain channel matrix to be quasi-stationary with a slowly varying phase term. Finally, receiver symbols are processed in a new domain called the frequency of affine (FoA) domain, where one-tap equalization is performed over doubly selective channels. We highlight that while one-tap equalization was previously achievable only for OFDM over frequency-selective channels, the proposed design enables the one-tap equalization capability to AFDM over doubly selective channels for high mobility applications.
+          </div>
+        </details>
       </div>
     </div>
 
