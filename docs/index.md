@@ -310,7 +310,7 @@ header:
   <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
     <!-- 照片 -->
     <div style="flex-shrink: 0; width: 150px;">
-      <img src="{{ '/assets/images/yuan.png' | relative_url }}" alt="Prof. Jinhong Yuan" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
+      <img src="{{ '/assets/images/yuan2.jpg' | relative_url }}" alt="Prof. Jinhong Yuan" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
     </div>
     
     <!-- 信息 -->
@@ -323,7 +323,7 @@ header:
       </div>
       <div style="font-size: 0.95rem; color: #333; line-height: 1.6;">
         Jinhong Yuan (M'02--SM'11--F'16) received the B.E. and Ph.D. degrees in electronics engineering in 1991 and 1997, respectively. From 1997 to 1999, he was a Research Fellow with the School of Electrical Engineering, University of Sydney, Sydney, Australia. In 2000, he joined the School of Electrical Engineering and Telecommunications, University of New South Wales, Sydney, Australia, where he is currently Head of School. He has published two books, five book chapters, over 300 papers in telecommunications journals and conference proceedings, and 50 industrial reports. He is a co-inventor of one patent on MIMO systems and four patents on low-density-parity-check codes. He has co-authored five Best Paper Awards and one Best Poster Award, including 2025 IEEE Asia-Pacific Best Paper Award, the Best Paper Award from the IEEE International Conference on Communications, Kansas City, USA, in 2018, the Best Paper Award from IEEE Wireless Communications and Networking Conference, Cancun, Mexico, in 2011, and the Best Paper Award from the IEEE International Symposium on Wireless Communications Systems, Trondheim, Norway, in 2007. He is an IEEE Fellow and listed as a 2025 Highly-Cited Researcher. He served as the IEEE NSW Chapter Chair of Joint Communications/Signal Processions/Ocean Engineering Chapter during 2011-2014 and served as an Associate Editor for the IEEE Transactions on Communications during 2012-2017 and 2020-2025 and IEEE Transactions on Wireless Communications during 2019-2024. His current research interests include error control coding and information theory, communication theory, wireless communications, and delay-Doppler domain signal processing and communications.
-好的
+
       </div>
     </div>
   </div>
@@ -552,7 +552,7 @@ header:
       <div class="item-content">
         <details>
           <summary>
-            <span class="item-title">Keynote: Rethinking Waveform for 6G Communications and Sensing: Delay-Doppler Alignment Modulation (DDAM)</span>
+            <span class="item-title">Keynote 2: Rethinking Waveform for 6G Communications and Sensing: Delay-Doppler Alignment Modulation (DDAM)</span>
             <div class="item-authors" style="margin-top: 4px;">
               <span class="author-label">Speaker:</span> Prof. Yong Zeng
             </div>
@@ -621,7 +621,7 @@ header:
       <div class="item-content">
         <details>
           <summary>
-            <span class="item-title">Keynote: On Modulation Waveforms for 6G High-Mobility Communications: OFDM, OTFS, or DD-a-OFDM?</span>
+            <span class="item-title">Keynote 3: On Modulation Waveforms for 6G High-Mobility Communications: OFDM, OTFS, or DD-a-OFDM?</span>
             <div class="item-authors" style="margin-top: 4px;">
               <span class="author-label">Speaker:</span> Prof. Zhiqiang Wei
             </div>
