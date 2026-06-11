@@ -311,7 +311,8 @@ header:
   <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
     <!-- 照片 -->
     <div style="flex-shrink: 0; width: 150px;">
-      <img src="yuan.png" alt="Prof. Jinhong Yuan" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
+      <!-- 注意这里的路径改为了 image/yuan.png -->
+      <img src="image/yuan.png" alt="Prof. Jinhong Yuan" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
     </div>
     
     <!-- 信息 -->
@@ -332,7 +333,8 @@ header:
   <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
     <!-- 照片 -->
     <div style="flex-shrink: 0; width: 150px;">
-      <img src="zeng.png" alt="Prof. Yong Zeng" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
+      <!-- 注意这里的路径改为了 image/zeng.png -->
+      <img src="image/zeng.png" alt="Prof. Yong Zeng" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
     </div>
     
     <!-- 信息 -->
@@ -354,7 +356,8 @@ header:
   <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
     <!-- 照片 -->
     <div style="flex-shrink: 0; width: 150px;">
-      <img src="wei.png" alt="Prof. Zhiqiang Wei" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
+      <!-- 注意这里的路径改为了 image/wei.png -->
+      <img src="image/wei.png" alt="Prof. Zhiqiang Wei" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
     </div>
     
     <!-- 信息 -->
